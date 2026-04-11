@@ -1,0 +1,1961 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+<title>ToolsHub — All-in-One Free Online Tools &amp; Articles</title>
+<meta name="description" content="Free online tools and expert guides: Word Counter, QR Code Generator, Password Generator, Age Calculator, BMI Calculator, Unit Converter and more. No signup needed."/>
+<meta name="keywords" content="free online tools, word counter, qr code generator, password generator, bmi calculator, age calculator, unit converter, case converter, online tools guide, productivity tools"/>
+<meta name="author" content="Dilshan Nayanajith Ilangasinghe"/>
+<meta property="og:title" content="ToolsHub — All-in-One Free Online Tools &amp; Articles"/>
+<meta property="og:description" content="Free online tools and expert guides for everyday tasks. No signup, no cost, instant results."/>
+<meta property="og:type" content="website"/>
+<meta property="og:url" content="https://toolshub.site/"/>
+<meta property="og:image" content="https://toolshub.site/og-image.png"/>
+<meta name="twitter:card" content="summary_large_image"/>
+<meta name="twitter:title" content="ToolsHub — All-in-One Free Online Tools"/>
+<meta name="twitter:description" content="Free online tools and articles. No signup needed."/>
+<link rel="canonical" href="https://toolshub.site/"/>
+<script type="application/ld+json">
+{
+  "@context":"https://schema.org",
+  "@type":"WebSite",
+  "name":"ToolsHub",
+  "url":"https://toolshub.site",
+  "description":"All-in-One Free Online Tools Hub — Word Counter, QR Code Generator, Password Generator, Age Calculator, BMI Calculator and more.",
+  "author":{"@type":"Person","name":"Dilshan Nayanajith Ilangasinghe","nationality":"Sri Lankan","email":"nayanajithilangasinghe2002@gmail.com"},
+  "potentialAction":{"@type":"SearchAction","target":"https://toolshub.site/?q={search_term_string}","query-input":"required name=search_term_string"}
+}
+</script>
+<link rel="preconnect" href="https://fonts.googleapis.com"/>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+<link href="https://fonts.googleapis.com/css2?family=Sora:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;600&family=Lora:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet"/>
+<style>
+/* ─── DESIGN TOKENS ─── */
+:root{
+  --blue-900:#0a1628;--blue-800:#0d2149;--blue-700:#0f3460;--blue-600:#1a4f8a;
+  --blue-500:#1e6ec8;--blue-400:#3b8de0;--blue-300:#6aaff0;--blue-100:#dbeeff;--blue-50:#f0f7ff;
+  --accent:#00c6ff;--accent2:#0072ff;--white:#ffffff;
+  --gray-100:#f4f7fc;--gray-200:#e8eef8;--gray-500:#6b7fa3;--gray-700:#3a4a6b;
+  --green:#00d97e;--red:#ff4757;--yellow:#ffd32a;
+  --shadow-sm:0 2px 8px rgba(10,22,40,0.07);--shadow-md:0 8px 28px rgba(10,22,40,0.10);
+  --shadow-lg:0 20px 50px rgba(10,22,40,0.15);--radius:14px;--radius-sm:8px;
+  --transition:all 0.25s cubic-bezier(0.4,0,0.2,1);
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth;font-size:16px}
+body{font-family:'Sora',sans-serif;background:var(--gray-100);color:var(--blue-900);line-height:1.6;overflow-x:hidden}
+a{text-decoration:none;color:inherit}
+img{max-width:100%;height:auto}
+button{cursor:pointer;font-family:'Sora',sans-serif}
+::-webkit-scrollbar{width:6px}
+::-webkit-scrollbar-track{background:var(--gray-100)}
+::-webkit-scrollbar-thumb{background:var(--blue-400);border-radius:3px}
+
+/* ─── NAVBAR ─── */
+#navbar{position:sticky;top:0;z-index:1000;background:rgba(255,255,255,0.94);backdrop-filter:blur(16px);-webkit-backdrop-filter:blur(16px);border-bottom:1px solid var(--gray-200);padding:0 24px;display:flex;align-items:center;justify-content:space-between;height:64px;box-shadow:var(--shadow-sm)}
+.nav-logo{display:flex;align-items:center;gap:10px;font-size:1.25rem;font-weight:800;color:var(--blue-700);letter-spacing:-0.5px;cursor:pointer}
+.nav-logo span{background:linear-gradient(135deg,var(--accent2),var(--accent));-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
+.logo-icon{width:36px;height:36px;background:linear-gradient(135deg,var(--accent2),var(--accent));border-radius:10px;display:grid;place-items:center;color:white;font-size:1.1rem;font-weight:900;flex-shrink:0}
+.nav-links{display:flex;gap:4px;align-items:center}
+.nav-links button{padding:8px 14px;border-radius:var(--radius-sm);font-size:0.875rem;font-weight:500;color:var(--gray-700);transition:var(--transition);background:none;border:none;cursor:pointer}
+.nav-links button:hover,.nav-links button.active{background:var(--blue-50);color:var(--blue-600)}
+.hamburger{display:none;flex-direction:column;gap:5px;background:none;border:none;padding:8px;cursor:pointer;border-radius:var(--radius-sm)}
+.hamburger span{width:22px;height:2px;background:var(--blue-700);border-radius:2px;transition:var(--transition);display:block}
+.hamburger[aria-expanded="true"] span:nth-child(1){transform:rotate(45deg) translate(5px,5px)}
+.hamburger[aria-expanded="true"] span:nth-child(2){opacity:0}
+.hamburger[aria-expanded="true"] span:nth-child(3){transform:rotate(-45deg) translate(5px,-5px)}
+.mobile-menu{display:none;position:fixed;top:64px;left:0;right:0;background:white;border-bottom:1px solid var(--gray-200);padding:16px;z-index:999;box-shadow:var(--shadow-md)}
+.mobile-menu button{display:block;width:100%;text-align:left;padding:12px 16px;border-radius:var(--radius-sm);font-weight:500;color:var(--gray-700);margin-bottom:4px;background:none;border:none;font-size:0.95rem;cursor:pointer;transition:var(--transition)}
+.mobile-menu button:hover{background:var(--blue-50);color:var(--blue-600)}
+
+/* ─── SECTIONS ─── */
+.section{display:none;min-height:calc(100vh - 64px)}
+.section.active{display:block}
+
+/* ─── AD PLACEHOLDERS ─── */
+.ad-placeholder{background:var(--gray-200);border:2px dashed var(--blue-300);border-radius:var(--radius-sm);display:flex;align-items:center;justify-content:center;color:var(--gray-500);font-size:0.8rem;font-weight:600;letter-spacing:0.5px;text-transform:uppercase}
+.ad-top{height:90px;margin:16px auto;max-width:728px}
+.ad-mid{height:250px;margin:32px auto;max-width:728px}
+.ad-bot{height:90px;margin:16px auto;max-width:728px}
+.ad-inline{height:100px;margin:28px 0;max-width:100%}
+.ad-sidebar{height:280px;width:100%;background:var(--gray-200);border:2px dashed var(--blue-300);border-radius:var(--radius-sm);display:flex;align-items:center;justify-content:center;color:var(--gray-500);font-size:0.8rem;font-weight:600;letter-spacing:0.5px;text-transform:uppercase;margin-bottom:24px}
+
+/* ─── HERO ─── */
+.hero{background:linear-gradient(135deg,var(--blue-800) 0%,var(--blue-600) 50%,var(--blue-500) 100%);padding:72px 24px 56px;text-align:center;position:relative;overflow:hidden}
+.hero::before{content:'';position:absolute;inset:0;background:url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.04'%3E%3Ccircle cx='30' cy='30' r='2'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E")}
+.hero-badge{display:inline-flex;align-items:center;gap:6px;background:rgba(255,255,255,0.15);border:1px solid rgba(255,255,255,0.25);color:white;padding:6px 16px;border-radius:50px;font-size:0.8rem;font-weight:600;letter-spacing:0.5px;margin-bottom:24px;backdrop-filter:blur(8px)}
+.hero h1{font-size:clamp(2rem,5vw,3.5rem);font-weight:800;color:white;line-height:1.15;letter-spacing:-1px;margin-bottom:16px}
+.hero h1 em{font-style:normal;background:linear-gradient(90deg,var(--accent),#7df9ff);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
+.hero p{font-size:1.1rem;color:rgba(255,255,255,0.8);max-width:560px;margin:0 auto 36px;font-weight:300}
+.search-wrap{max-width:580px;margin:0 auto;position:relative;z-index:1}
+.search-wrap input{width:100%;padding:16px 56px 16px 20px;border-radius:50px;border:none;font-size:1rem;font-family:'Sora',sans-serif;background:white;color:var(--blue-900);box-shadow:var(--shadow-lg);outline:none}
+.search-wrap input::placeholder{color:var(--gray-500)}
+.search-btn{position:absolute;right:6px;top:50%;transform:translateY(-50%);background:linear-gradient(135deg,var(--accent2),var(--accent));border:none;color:white;width:40px;height:40px;border-radius:50%;display:grid;place-items:center;font-size:1rem;transition:var(--transition)}
+.search-btn:hover{transform:translateY(-50%) scale(1.05)}
+.hero-stats{display:flex;justify-content:center;gap:32px;margin-top:40px;flex-wrap:wrap}
+.hero-stats .stat{text-align:center}
+.hero-stats .stat strong{display:block;font-size:1.5rem;font-weight:800;color:white}
+.hero-stats .stat span{font-size:0.8rem;color:rgba(255,255,255,0.65);font-weight:400}
+
+/* ─── CONTAINER ─── */
+.container{max-width:1140px;margin:0 auto;padding:0 20px}
+
+/* ─── SECTION TITLE ─── */
+.section-title{text-align:center;margin-bottom:40px}
+.section-title h2{font-size:clamp(1.5rem,3vw,2.2rem);font-weight:800;color:var(--blue-800);letter-spacing:-0.5px;margin-bottom:8px}
+.section-title p{color:var(--gray-500);font-size:0.95rem;max-width:480px;margin:0 auto}
+.category-label{display:inline-flex;align-items:center;gap:8px;font-size:0.75rem;font-weight:700;text-transform:uppercase;letter-spacing:1px;color:var(--blue-500);margin-bottom:12px}
+.category-label::before,.category-label::after{content:'';flex:1;height:1px;background:var(--blue-300);width:32px}
+
+/* ─── TOOLS GRID ─── */
+.tools-section{padding:56px 0}
+.tools-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:20px;margin-bottom:48px}
+.tool-card{background:white;border-radius:var(--radius);padding:28px 24px;box-shadow:var(--shadow-sm);border:1px solid var(--gray-200);transition:var(--transition);cursor:pointer;position:relative;overflow:hidden}
+.tool-card::before{content:'';position:absolute;top:0;left:0;right:0;height:3px;background:linear-gradient(90deg,var(--accent2),var(--accent));opacity:0;transition:var(--transition)}
+.tool-card:hover{transform:translateY(-4px);box-shadow:var(--shadow-md);border-color:var(--blue-300)}
+.tool-card:hover::before{opacity:1}
+.tool-icon{width:52px;height:52px;border-radius:14px;display:grid;place-items:center;font-size:1.4rem;margin-bottom:16px;flex-shrink:0}
+.icon-blue{background:linear-gradient(135deg,#dbeeff,#c5e2ff)}
+.icon-green{background:linear-gradient(135deg,#d4f8e8,#b8f0d5)}
+.icon-purple{background:linear-gradient(135deg,#e8d5ff,#d5b8ff)}
+.icon-orange{background:linear-gradient(135deg,#ffecd5,#ffd8b0)}
+.icon-pink{background:linear-gradient(135deg,#ffd5e8,#ffb8d5)}
+.icon-cyan{background:linear-gradient(135deg,#d5f8ff,#b8f2ff)}
+.tool-card h3{font-size:1rem;font-weight:700;color:var(--blue-800);margin-bottom:6px}
+.tool-card p{font-size:0.85rem;color:var(--gray-500);line-height:1.5;margin-bottom:16px}
+.tool-btn{display:inline-flex;align-items:center;gap:6px;background:var(--blue-50);color:var(--blue-600);border-radius:var(--radius-sm);padding:8px 16px;font-size:0.82rem;font-weight:600;transition:var(--transition);border:1px solid var(--blue-100)}
+.tool-btn:hover{background:var(--blue-500);color:white;border-color:var(--blue-500)}
+
+/* ─── TOOL MODAL ─── */
+.modal-overlay{position:fixed;inset:0;background:rgba(10,22,40,0.55);z-index:2000;display:flex;align-items:center;justify-content:center;padding:20px;opacity:0;pointer-events:none;transition:var(--transition);backdrop-filter:blur(4px)}
+.modal-overlay.open{opacity:1;pointer-events:all}
+.modal{background:white;border-radius:var(--radius);max-width:680px;width:100%;max-height:90vh;overflow-y:auto;box-shadow:var(--shadow-lg);transform:scale(0.95) translateY(20px);transition:var(--transition)}
+.modal-overlay.open .modal{transform:scale(1) translateY(0)}
+.modal-header{padding:24px 28px 20px;border-bottom:1px solid var(--gray-200);display:flex;align-items:center;justify-content:space-between;position:sticky;top:0;background:white;z-index:1;border-radius:var(--radius) var(--radius) 0 0}
+.modal-header h2{font-size:1.15rem;font-weight:700;color:var(--blue-800)}
+.modal-close{background:var(--gray-100);border:none;width:36px;height:36px;border-radius:50%;display:grid;place-items:center;font-size:1.1rem;color:var(--gray-500);transition:var(--transition);cursor:pointer}
+.modal-close:hover{background:var(--gray-200);color:var(--blue-800)}
+.modal-body{padding:28px}
+
+/* ─── FORM ELEMENTS ─── */
+textarea,input[type=text],input[type=number],input[type=date],input[type=email],select{width:100%;padding:12px 16px;border:1.5px solid var(--gray-200);border-radius:var(--radius-sm);font-size:0.95rem;font-family:'Sora',sans-serif;color:var(--blue-900);background:white;outline:none;transition:var(--transition)}
+textarea:focus,input[type=text]:focus,input[type=number]:focus,input[type=date]:focus,input[type=email]:focus,select:focus{border-color:var(--blue-400);box-shadow:0 0 0 3px rgba(30,110,200,0.1)}
+textarea{resize:vertical;min-height:140px}
+.form-group{margin-bottom:18px}
+.form-group label{display:block;font-size:0.85rem;font-weight:600;color:var(--blue-700);margin-bottom:8px}
+.btn{padding:11px 22px;border-radius:var(--radius-sm);font-size:0.9rem;font-weight:600;border:none;transition:var(--transition);display:inline-flex;align-items:center;gap:8px}
+.btn-primary{background:linear-gradient(135deg,var(--accent2),var(--accent));color:white;box-shadow:0 4px 14px rgba(0,114,255,0.25)}
+.btn-primary:hover{transform:translateY(-1px);box-shadow:0 6px 20px rgba(0,114,255,0.35)}
+.btn-secondary{background:var(--gray-100);color:var(--blue-700);border:1px solid var(--gray-200)}
+.btn-secondary:hover{background:var(--gray-200)}
+.btn-green{background:linear-gradient(135deg,#00b863,var(--green));color:white}
+.btn-green:hover{transform:translateY(-1px);box-shadow:0 4px 14px rgba(0,217,126,0.3)}
+.btn-row{display:flex;gap:10px;flex-wrap:wrap;margin-top:12px}
+.result-box{background:var(--gray-100);border:1px solid var(--gray-200);border-radius:var(--radius-sm);padding:16px;margin-top:16px;font-family:'JetBrains Mono',monospace;font-size:0.9rem;color:var(--blue-800);word-break:break-all;min-height:48px;position:relative}
+.result-label{font-size:0.75rem;font-weight:700;text-transform:uppercase;letter-spacing:0.5px;color:var(--gray-500);margin-bottom:8px;font-family:'Sora',sans-serif}
+.stats-row{display:flex;flex-wrap:wrap;gap:12px;margin-top:16px}
+.stat-badge{background:var(--blue-50);border:1px solid var(--blue-100);border-radius:var(--radius-sm);padding:10px 16px;text-align:center;flex:1;min-width:80px}
+.stat-badge strong{display:block;font-size:1.25rem;font-weight:800;color:var(--blue-600)}
+.stat-badge span{font-size:0.7rem;color:var(--gray-500);font-weight:600;text-transform:uppercase;letter-spacing:0.5px}
+.range-row{display:flex;gap:12px;align-items:center;flex-wrap:wrap}
+.range-row input[type=range]{flex:1;-webkit-appearance:none;height:6px;background:var(--gray-200);border-radius:3px;outline:none;border:none;padding:0}
+.range-row input[type=range]::-webkit-slider-thumb{-webkit-appearance:none;width:18px;height:18px;border-radius:50%;background:var(--blue-500);cursor:pointer}
+.checkbox-group{display:flex;gap:12px;flex-wrap:wrap;margin:12px 0}
+.checkbox-group label{display:flex;align-items:center;gap:6px;font-size:0.875rem;color:var(--gray-700);cursor:pointer;font-weight:500}
+.checkbox-group input[type=checkbox]{width:16px;height:16px;accent-color:var(--blue-500)}
+
+/* ─── COPY TOAST ─── */
+.copy-toast{position:fixed;bottom:24px;right:24px;background:var(--blue-800);color:white;padding:12px 20px;border-radius:var(--radius-sm);font-size:0.85rem;font-weight:600;z-index:9999;transform:translateY(80px);transition:var(--transition);opacity:0;pointer-events:none}
+.copy-toast.show{transform:translateY(0);opacity:1}
+
+/* ─── FAQ ─── */
+.faq-section{background:white;padding:64px 0}
+.faq-item{border-bottom:1px solid var(--gray-200);padding:20px 0}
+.faq-q{display:flex;justify-content:space-between;align-items:center;cursor:pointer;font-weight:600;color:var(--blue-800);gap:16px;background:none;border:none;width:100%;text-align:left;font-family:'Sora',sans-serif;font-size:0.95rem;padding:0}
+.faq-q .icon{width:28px;height:28px;border-radius:50%;background:var(--blue-50);display:grid;place-items:center;flex-shrink:0;color:var(--blue-500);font-size:1rem;transition:var(--transition)}
+.faq-item.open .faq-q .icon{transform:rotate(45deg);background:var(--blue-500);color:white}
+.faq-a{max-height:0;overflow:hidden;transition:max-height 0.35s ease,padding 0.2s;font-size:0.9rem;color:var(--gray-500);line-height:1.7}
+.faq-item.open .faq-a{max-height:300px;padding-top:12px}
+
+/* ─── PAGE HERO ─── */
+.page-hero{background:linear-gradient(135deg,var(--blue-800),var(--blue-600));padding:56px 24px;text-align:center}
+.page-hero h1{font-size:clamp(1.8rem,4vw,2.8rem);font-weight:800;color:white;letter-spacing:-0.5px;margin-bottom:8px}
+.page-hero p{color:rgba(255,255,255,0.75);font-size:1rem;max-width:480px;margin:0 auto}
+.page-content{max-width:860px;margin:0 auto;padding:56px 24px}
+.page-content h2{font-size:1.3rem;font-weight:700;color:var(--blue-800);margin:32px 0 12px}
+.page-content p,.page-content li{color:var(--gray-700);font-size:0.95rem;line-height:1.8;margin-bottom:8px}
+.page-content ul{padding-left:20px;margin-bottom:16px}
+.info-card{background:white;border-radius:var(--radius);padding:28px;box-shadow:var(--shadow-sm);border:1px solid var(--gray-200);margin-bottom:24px}
+.info-card h3{font-size:1rem;font-weight:700;color:var(--blue-700);margin-bottom:16px;padding-bottom:12px;border-bottom:1px solid var(--gray-200)}
+.info-row{display:flex;gap:12px;align-items:flex-start;padding:10px 0;border-bottom:1px solid var(--gray-100)}
+.info-row:last-child{border-bottom:none}
+.info-row .label{font-size:0.8rem;font-weight:700;text-transform:uppercase;letter-spacing:0.5px;color:var(--gray-500);min-width:110px;padding-top:2px}
+.info-row .val{font-size:0.9rem;color:var(--blue-800);font-weight:500}
+
+/* ─── FOUNDER CARD ─── */
+.founder-section{padding:40px 0 0}
+.founder-card{background:white;border-radius:var(--radius);box-shadow:var(--shadow-md);border:1px solid var(--gray-200);overflow:hidden;margin-bottom:32px}
+.founder-card-top{background:linear-gradient(135deg,var(--blue-800) 0%,var(--blue-600) 60%,var(--blue-400) 100%);padding:40px 36px 32px;position:relative;overflow:hidden}
+.founder-card-top::before{content:'';position:absolute;inset:0;background:url("data:image/svg+xml,%3Csvg width='40' height='40' viewBox='0 0 40 40' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='%23ffffff' fill-opacity='0.05'%3E%3Ccircle cx='20' cy='20' r='1.5'/%3E%3C/g%3E%3C/svg%3E")}
+.founder-avatar-wrap{display:flex;align-items:flex-end;gap:24px;position:relative;z-index:1;flex-wrap:wrap}
+.founder-avatar{width:96px;height:96px;border-radius:50%;background:linear-gradient(135deg,var(--accent),var(--accent2));display:flex;align-items:center;justify-content:center;font-size:2.2rem;font-weight:800;color:white;border:4px solid rgba(255,255,255,0.25);flex-shrink:0;letter-spacing:-1px;box-shadow:0 8px 24px rgba(0,0,0,0.2)}
+.founder-headline{flex:1;min-width:200px}
+.founder-name{font-size:clamp(1.3rem,3vw,1.8rem);font-weight:800;color:white;letter-spacing:-0.5px;line-height:1.2;margin-bottom:6px}
+.founder-title{display:inline-flex;align-items:center;gap:6px;background:rgba(255,255,255,0.18);border:1px solid rgba(255,255,255,0.25);color:rgba(255,255,255,0.95);padding:5px 14px;border-radius:50px;font-size:0.82rem;font-weight:600;backdrop-filter:blur(8px);margin-bottom:10px}
+.founder-flag{font-size:0.85rem;color:rgba(255,255,255,0.75);font-weight:500}
+.founder-card-body{padding:32px 36px}
+.founder-bio{font-size:0.96rem;color:var(--gray-700);line-height:1.85;margin-bottom:28px;border-left:3px solid var(--blue-400);padding-left:16px}
+.founder-details{display:grid;grid-template-columns:repeat(auto-fill,minmax(220px,1fr));gap:16px;margin-bottom:28px}
+.founder-detail-item{display:flex;align-items:center;gap:12px;background:var(--gray-100);border-radius:var(--radius-sm);padding:12px 16px}
+.founder-detail-icon{width:36px;height:36px;border-radius:10px;background:linear-gradient(135deg,var(--blue-50),var(--blue-100));display:flex;align-items:center;justify-content:center;font-size:1rem;flex-shrink:0}
+.founder-detail-text{flex:1;min-width:0}
+.founder-detail-label{font-size:0.72rem;font-weight:700;text-transform:uppercase;letter-spacing:0.5px;color:var(--gray-500);display:block}
+.founder-detail-val{font-size:0.88rem;font-weight:600;color:var(--blue-800);display:block;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.founder-detail-val a{color:var(--blue-500)}
+.founder-detail-val a:hover{text-decoration:underline}
+.skills-section{margin-top:4px}
+.skills-section h4{font-size:0.85rem;font-weight:700;color:var(--blue-700);text-transform:uppercase;letter-spacing:0.5px;margin-bottom:12px}
+.skills-grid{display:flex;flex-wrap:wrap;gap:8px}
+.skill-tag{background:var(--blue-50);border:1px solid var(--blue-100);color:var(--blue-600);padding:5px 12px;border-radius:50px;font-size:0.78rem;font-weight:600;transition:var(--transition)}
+.skill-tag:hover{background:var(--blue-500);color:white;border-color:var(--blue-500)}
+
+/* ─── CONTACT FORM ─── */
+.contact-form{background:white;border-radius:var(--radius);padding:36px;box-shadow:var(--shadow-sm);border:1px solid var(--gray-200)}
+.contact-form h3{font-size:1.15rem;font-weight:700;color:var(--blue-800);margin-bottom:24px}
+.contact-note{background:var(--blue-50);border-left:3px solid var(--blue-400);padding:12px 16px;border-radius:0 var(--radius-sm) var(--radius-sm) 0;font-size:0.85rem;color:var(--blue-700);margin-top:16px}
+
+/* ─── FOOTER ─── */
+footer{background:var(--blue-900);color:rgba(255,255,255,0.7);padding:48px 24px 24px;text-align:center}
+footer .footer-logo{font-size:1.4rem;font-weight:800;color:white;margin-bottom:16px}
+footer .footer-logo span{color:var(--accent)}
+footer p{font-size:0.85rem;margin-bottom:8px}
+footer .footer-links{display:flex;justify-content:center;flex-wrap:wrap;gap:16px;margin:20px 0}
+footer .footer-links button{font-size:0.85rem;color:rgba(255,255,255,0.6);transition:var(--transition);background:none;border:none;cursor:pointer;font-family:'Sora',sans-serif}
+footer .footer-links button:hover{color:var(--accent)}
+footer .copyright{font-size:0.75rem;color:rgba(255,255,255,0.35);margin-top:24px;padding-top:20px;border-top:1px solid rgba(255,255,255,0.08)}
+
+/* ─── QR CODE ─── */
+#qrcode{display:flex;justify-content:center;margin-top:16px}
+#qrcode canvas,#qrcode img{border-radius:8px}
+
+/* ─── PASSWORD STRENGTH ─── */
+.strength-bar{height:6px;border-radius:3px;background:var(--gray-200);margin-top:10px;overflow:hidden}
+.strength-fill{height:100%;border-radius:3px;transition:var(--transition);width:0}
+.strength-weak{background:var(--red);width:33%}
+.strength-medium{background:var(--yellow);width:66%}
+.strength-strong{background:var(--green);width:100%}
+
+/* ─── BMI METER ─── */
+.bmi-meter{background:var(--gray-100);border-radius:var(--radius-sm);padding:20px;margin-top:16px;text-align:center}
+.bmi-value{font-size:3rem;font-weight:800;line-height:1}
+.bmi-label{font-size:0.9rem;font-weight:600;margin-top:8px}
+.bmi-underweight{color:#3b82f6}
+.bmi-normal{color:var(--green)}
+.bmi-overweight{color:var(--yellow)}
+.bmi-obese{color:var(--red)}
+
+/* ─── NO RESULTS ─── */
+.no-results{grid-column:1/-1;text-align:center;padding:48px 24px;color:var(--gray-500)}
+.no-results p{font-size:1rem;margin-top:8px}
+
+/* ═══════════════════════════════════════
+   ─── BLOG STYLES
+═══════════════════════════════════════ */
+
+/* Blog Hero */
+.blog-hero{background:linear-gradient(135deg,var(--blue-800) 0%,var(--blue-700) 50%,var(--blue-600) 100%);padding:64px 24px 52px;text-align:center;position:relative;overflow:hidden}
+.blog-hero::before{content:'';position:absolute;inset:0;background:url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none'%3E%3Cg fill='%23ffffff' fill-opacity='0.04'%3E%3Ccircle cx='30' cy='30' r='2'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E")}
+.blog-hero h1{font-size:clamp(1.8rem,4vw,2.8rem);font-weight:800;color:white;letter-spacing:-0.5px;margin-bottom:10px;position:relative;z-index:1}
+.blog-hero p{color:rgba(255,255,255,0.78);font-size:1rem;max-width:520px;margin:0 auto;position:relative;z-index:1}
+
+/* Blog Layout */
+.blog-layout{display:grid;grid-template-columns:1fr 300px;gap:40px;max-width:1140px;margin:0 auto;padding:48px 24px}
+.blog-main{min-width:0}
+.blog-sidebar{min-width:0}
+
+/* Blog Grid */
+.blog-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:24px;margin-bottom:32px}
+
+/* Blog Card */
+.blog-card{background:white;border-radius:var(--radius);box-shadow:var(--shadow-sm);border:1px solid var(--gray-200);overflow:hidden;transition:var(--transition);cursor:pointer;display:flex;flex-direction:column}
+.blog-card:hover{transform:translateY(-5px);box-shadow:var(--shadow-md);border-color:var(--blue-300)}
+.blog-card-img{height:180px;position:relative;overflow:hidden;flex-shrink:0}
+.blog-card-img-inner{width:100%;height:100%;display:flex;align-items:center;justify-content:center;font-size:4rem;transition:transform 0.4s ease}
+.blog-card:hover .blog-card-img-inner{transform:scale(1.08)}
+.blog-card-body{padding:20px;flex:1;display:flex;flex-direction:column}
+.blog-card-tag{display:inline-flex;align-items:center;gap:4px;background:var(--blue-50);color:var(--blue-600);border:1px solid var(--blue-100);border-radius:50px;font-size:0.72rem;font-weight:700;padding:3px 10px;text-transform:uppercase;letter-spacing:0.5px;margin-bottom:10px;width:fit-content}
+.blog-card h3{font-size:1.02rem;font-weight:700;color:var(--blue-800);line-height:1.4;margin-bottom:8px}
+.blog-card p{font-size:0.85rem;color:var(--gray-500);line-height:1.6;flex:1;margin-bottom:16px}
+.blog-card-meta{display:flex;align-items:center;justify-content:space-between;font-size:0.75rem;color:var(--gray-500);border-top:1px solid var(--gray-200);padding-top:12px;margin-top:auto}
+.blog-card-meta span{display:flex;align-items:center;gap:4px}
+.read-more-btn{background:none;border:none;color:var(--blue-500);font-size:0.82rem;font-weight:700;cursor:pointer;font-family:'Sora',sans-serif;padding:0;display:inline-flex;align-items:center;gap:4px;transition:var(--transition)}
+.read-more-btn:hover{color:var(--blue-700);gap:8px}
+
+/* Blog gradient covers */
+.bg-grad-1{background:linear-gradient(135deg,#dbeeff 0%,#c5e2ff 100%)}
+.bg-grad-2{background:linear-gradient(135deg,#d4f8e8 0%,#b8f0d5 100%)}
+.bg-grad-3{background:linear-gradient(135deg,#ffecd5 0%,#ffd8b0 100%)}
+.bg-grad-4{background:linear-gradient(135deg,#e8d5ff 0%,#d5b8ff 100%)}
+.bg-grad-5{background:linear-gradient(135deg,#ffd5e8 0%,#ffb8d5 100%)}
+
+/* Sidebar Widgets */
+.sidebar-widget{background:white;border-radius:var(--radius);border:1px solid var(--gray-200);box-shadow:var(--shadow-sm);padding:20px;margin-bottom:24px}
+.sidebar-widget h3{font-size:0.9rem;font-weight:700;color:var(--blue-800);margin-bottom:16px;padding-bottom:10px;border-bottom:1px solid var(--gray-200);text-transform:uppercase;letter-spacing:0.5px}
+.sidebar-tool-link{display:flex;align-items:center;gap:10px;padding:8px 0;border-bottom:1px solid var(--gray-100);cursor:pointer;transition:var(--transition)}
+.sidebar-tool-link:last-child{border-bottom:none}
+.sidebar-tool-link:hover .sidebar-tool-name{color:var(--blue-500)}
+.sidebar-tool-icon{width:32px;height:32px;border-radius:8px;display:flex;align-items:center;justify-content:center;font-size:0.95rem;flex-shrink:0}
+.sidebar-tool-name{font-size:0.85rem;font-weight:600;color:var(--blue-800);transition:var(--transition)}
+.sidebar-art-link{display:flex;align-items:flex-start;gap:10px;padding:8px 0;border-bottom:1px solid var(--gray-100);cursor:pointer;transition:var(--transition)}
+.sidebar-art-link:last-child{border-bottom:none}
+.sidebar-art-link:hover .sidebar-art-title{color:var(--blue-500)}
+.sidebar-art-num{width:24px;height:24px;border-radius:6px;background:var(--blue-50);color:var(--blue-500);font-size:0.72rem;font-weight:700;display:flex;align-items:center;justify-content:center;flex-shrink:0;margin-top:2px}
+.sidebar-art-title{font-size:0.83rem;font-weight:600;color:var(--blue-800);line-height:1.4;transition:var(--transition)}
+
+/* ─── ARTICLE PAGE ─── */
+.article-page{display:none}
+.article-page.active-article{display:block}
+.article-layout{display:grid;grid-template-columns:1fr 300px;gap:40px;max-width:1140px;margin:0 auto;padding:48px 24px}
+.article-main{min-width:0}
+.article-sidebar{min-width:0}
+
+/* Article Header */
+.article-header{margin-bottom:32px}
+.back-btn{display:inline-flex;align-items:center;gap:6px;background:var(--gray-100);color:var(--blue-700);border:1px solid var(--gray-200);border-radius:var(--radius-sm);padding:8px 16px;font-size:0.82rem;font-weight:600;cursor:pointer;transition:var(--transition);margin-bottom:24px;font-family:'Sora',sans-serif}
+.back-btn:hover{background:var(--blue-50);color:var(--blue-600);border-color:var(--blue-200)}
+.article-tag{display:inline-flex;align-items:center;gap:4px;background:var(--blue-50);color:var(--blue-600);border:1px solid var(--blue-100);border-radius:50px;font-size:0.72rem;font-weight:700;padding:4px 12px;text-transform:uppercase;letter-spacing:0.5px;margin-bottom:14px}
+.article-header h1{font-size:clamp(1.6rem,3.5vw,2.4rem);font-weight:800;color:var(--blue-800);line-height:1.25;letter-spacing:-0.5px;margin-bottom:16px}
+.article-meta-row{display:flex;align-items:center;gap:16px;flex-wrap:wrap;font-size:0.82rem;color:var(--gray-500);margin-bottom:24px;padding-bottom:20px;border-bottom:1px solid var(--gray-200)}
+.article-meta-item{display:flex;align-items:center;gap:5px}
+.article-author-avatar{width:32px;height:32px;border-radius:50%;background:linear-gradient(135deg,var(--accent2),var(--accent));display:flex;align-items:center;justify-content:center;color:white;font-size:0.72rem;font-weight:700;flex-shrink:0}
+.article-author-name{font-weight:600;color:var(--blue-700)}
+
+/* Featured Image */
+.article-featured-img{width:100%;height:280px;border-radius:var(--radius);overflow:hidden;margin-bottom:32px;display:flex;align-items:center;justify-content:center;font-size:6rem;position:relative}
+.article-featured-img::after{content:'';position:absolute;inset:0;background:linear-gradient(to bottom,transparent 60%,rgba(10,22,40,0.06))}
+
+/* Article Body */
+.article-body{font-family:'Sora',sans-serif;color:var(--gray-700);line-height:1.85;font-size:1rem}
+.article-body h2{font-size:1.35rem;font-weight:700;color:var(--blue-800);margin:36px 0 14px;line-height:1.3}
+.article-body h3{font-size:1.1rem;font-weight:700;color:var(--blue-700);margin:28px 0 10px}
+.article-body p{margin-bottom:18px}
+.article-body ul,.article-body ol{padding-left:24px;margin-bottom:18px}
+.article-body li{margin-bottom:8px;line-height:1.7}
+.article-body strong{color:var(--blue-800);font-weight:700}
+.article-body em{font-style:italic;color:var(--blue-700)}
+.article-body blockquote{border-left:4px solid var(--blue-400);background:var(--blue-50);padding:16px 20px;border-radius:0 var(--radius-sm) var(--radius-sm) 0;margin:24px 0;font-style:italic;color:var(--blue-700);font-size:0.98rem}
+.article-body .highlight-box{background:linear-gradient(135deg,var(--blue-50),#e8f4ff);border:1px solid var(--blue-100);border-radius:var(--radius-sm);padding:20px 24px;margin:24px 0}
+.article-body .highlight-box strong{color:var(--blue-600)}
+.article-body table{width:100%;border-collapse:collapse;margin:20px 0;font-size:0.9rem}
+.article-body th{background:var(--blue-700);color:white;padding:10px 14px;text-align:left;font-weight:600}
+.article-body td{padding:10px 14px;border-bottom:1px solid var(--gray-200)}
+.article-body tr:nth-child(even) td{background:var(--gray-100)}
+
+/* CTA Box */
+.cta-box{background:linear-gradient(135deg,var(--blue-800),var(--blue-600));border-radius:var(--radius);padding:28px 32px;margin:36px 0;text-align:center;position:relative;overflow:hidden}
+.cta-box::before{content:'';position:absolute;inset:0;background:url("data:image/svg+xml,%3Csvg width='40' height='40' viewBox='0 0 40 40' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='%23ffffff' fill-opacity='0.05'%3E%3Ccircle cx='20' cy='20' r='1.5'/%3E%3C/g%3E%3C/svg%3E")}
+.cta-box h3{font-size:1.15rem;font-weight:700;color:white;margin-bottom:8px;position:relative;z-index:1}
+.cta-box p{color:rgba(255,255,255,0.8);font-size:0.9rem;margin-bottom:18px;position:relative;z-index:1}
+.cta-box .btn{position:relative;z-index:1;background:white;color:var(--blue-700);font-weight:700}
+.cta-box .btn:hover{background:var(--accent);color:white}
+
+/* Article Footer */
+.article-footer{margin-top:48px;padding-top:28px;border-top:1px solid var(--gray-200)}
+.article-footer h3{font-size:1.1rem;font-weight:700;color:var(--blue-800);margin-bottom:16px}
+.related-articles-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(220px,1fr));gap:16px}
+.related-art-card{background:white;border-radius:var(--radius-sm);border:1px solid var(--gray-200);padding:16px;cursor:pointer;transition:var(--transition)}
+.related-art-card:hover{border-color:var(--blue-300);background:var(--blue-50)}
+.related-art-card .tag{font-size:0.7rem;font-weight:700;color:var(--blue-500);text-transform:uppercase;letter-spacing:0.5px;margin-bottom:6px}
+.related-art-card h4{font-size:0.88rem;font-weight:600;color:var(--blue-800);line-height:1.4}
+
+/* ─── ANIMATIONS ─── */
+@keyframes fadeUp{from{opacity:0;transform:translateY(20px)}to{opacity:1;transform:translateY(0)}}
+.fadeup{animation:fadeUp 0.5s ease both}
+.fadeup-d1{animation-delay:0.1s}
+.fadeup-d2{animation-delay:0.2s}
+.fadeup-d3{animation-delay:0.3s}
+
+/* ─── RESPONSIVE ─── */
+@media(max-width:900px){
+  .blog-layout,.article-layout{grid-template-columns:1fr}
+  .blog-sidebar,.article-sidebar{display:none}
+}
+@media(max-width:768px){
+  .nav-links{display:none}
+  .hamburger{display:flex}
+  .tools-grid,.blog-grid{grid-template-columns:1fr}
+  .hero-stats{gap:20px}
+  .btn-row{flex-direction:column}
+  .btn{width:100%;justify-content:center}
+  .range-row{flex-direction:column;align-items:stretch}
+  .modal-body{padding:20px}
+  .modal-header{padding:18px 20px}
+  .founder-card-body{padding:24px 20px}
+  .founder-card-top{padding:28px 20px 24px}
+  .founder-details{grid-template-columns:1fr}
+  .blog-layout,.article-layout{padding:24px 16px}
+  .article-featured-img{height:200px}
+}
+@media(max-width:480px){
+  .hero{padding:48px 16px 40px}
+  .stats-row{flex-direction:column}
+  .founder-avatar-wrap{flex-direction:column;align-items:flex-start;gap:16px}
+}
+</style>
+</head>
+<body>
+
+<!-- ══════════ NAVBAR ══════════ -->
+<nav id="navbar" role="navigation" aria-label="Main navigation">
+  <div class="nav-logo" id="navLogo" role="button" tabindex="0" aria-label="ToolsHub Home">
+    <div class="logo-icon" aria-hidden="true">T</div>
+    Tools<span>Hub</span>
+  </div>
+  <div class="nav-links" role="menubar">
+    <button role="menuitem" data-section="home" class="active" aria-current="page">🏠 Home</button>
+    <button role="menuitem" data-section="blog">📝 Blog</button>
+    <button role="menuitem" data-section="about">👤 About</button>
+    <button role="menuitem" data-section="contact">✉️ Contact</button>
+    <button role="menuitem" data-section="privacy">🔒 Privacy</button>
+    <button role="menuitem" data-section="terms">📋 Terms</button>
+  </div>
+  <button class="hamburger" id="hamburger" aria-label="Toggle navigation menu" aria-expanded="false" aria-controls="mobileMenu">
+    <span></span><span></span><span></span>
+  </button>
+</nav>
+
+<div class="mobile-menu" id="mobileMenu" role="menu" aria-label="Mobile navigation">
+  <button role="menuitem" data-section="home">🏠 Home</button>
+  <button role="menuitem" data-section="blog">📝 Blog</button>
+  <button role="menuitem" data-section="about">👤 About</button>
+  <button role="menuitem" data-section="contact">✉️ Contact</button>
+  <button role="menuitem" data-section="privacy">🔒 Privacy</button>
+  <button role="menuitem" data-section="terms">📋 Terms</button>
+</div>
+
+<!-- ══════════ HOME SECTION ══════════ -->
+<div id="home" class="section active" role="main">
+
+  <div class="container"><div class="ad-placeholder ad-top" aria-label="Advertisement space">📢 Advertisement (728×90)</div></div>
+
+  <div class="hero" role="banner">
+    <div class="hero-badge">✨ 8 Free Tools + Expert Articles — No Signup</div>
+    <h1>Your <em>All-in-One</em><br/>Online Tools Hub</h1>
+    <p>Word counters, QR generators, calculators and more — instant results, zero cost, no signup needed.</p>
+    <div class="search-wrap" role="search">
+      <label for="searchInput" style="position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0,0,0,0)">Search tools</label>
+      <input type="text" id="searchInput" placeholder="Search tools… e.g. 'password', 'BMI'" autocomplete="off" aria-label="Search tools"/>
+      <button class="search-btn" id="searchBtn" aria-label="Search">🔍</button>
+    </div>
+    <div class="hero-stats" aria-label="Site statistics">
+      <div class="stat fadeup fadeup-d1"><strong>8+</strong><span>Free Tools</span></div>
+      <div class="stat fadeup fadeup-d2"><strong>5+</strong><span>Expert Articles</span></div>
+      <div class="stat fadeup fadeup-d3"><strong>0</strong><span>Sign-ups Needed</span></div>
+    </div>
+  </div>
+
+  <div class="tools-section">
+    <div class="container">
+      <div class="section-title" style="text-align:left;margin-bottom:24px">
+        <div class="category-label">📝 Text Tools</div>
+      </div>
+      <div class="tools-grid" id="toolsGrid" role="list">
+        <div class="tool-card" data-tags="word count text" role="listitem">
+          <div class="tool-icon icon-blue" aria-hidden="true">📄</div>
+          <h3>Word Counter</h3>
+          <p>Count words, characters, sentences and reading time in any text instantly.</p>
+          <button class="tool-btn" data-tool="wordcounter" aria-label="Open Word Counter tool">Open Tool →</button>
+        </div>
+        <div class="tool-card" data-tags="character count text letters" role="listitem">
+          <div class="tool-icon icon-purple" aria-hidden="true">🔠</div>
+          <h3>Character Counter</h3>
+          <p>Count characters with and without spaces. Great for social media limits.</p>
+          <button class="tool-btn" data-tool="charcounter" aria-label="Open Character Counter tool">Open Tool →</button>
+        </div>
+        <div class="tool-card" data-tags="case convert text uppercase lowercase" role="listitem">
+          <div class="tool-icon icon-pink" aria-hidden="true">🔡</div>
+          <h3>Case Converter</h3>
+          <p>Convert text to UPPER, lower, Title Case or Sentence case in one click.</p>
+          <button class="tool-btn" data-tool="caseconverter" aria-label="Open Case Converter tool">Open Tool →</button>
+        </div>
+        <div class="tool-card" data-tags="qr code generate url link" role="listitem">
+          <div class="tool-icon icon-green" aria-hidden="true">📱</div>
+          <h3>QR Code Generator</h3>
+          <p>Generate QR codes for URLs, text, emails instantly. Download as image.</p>
+          <button class="tool-btn" data-tool="qrcode" aria-label="Open QR Code Generator tool">Open Tool →</button>
+        </div>
+        <div class="tool-card" data-tags="password generate secure random" role="listitem">
+          <div class="tool-icon icon-orange" aria-hidden="true">🔐</div>
+          <h3>Password Generator</h3>
+          <p>Create strong, random passwords with custom length and character sets.</p>
+          <button class="tool-btn" data-tool="password" aria-label="Open Password Generator tool">Open Tool →</button>
+        </div>
+        <div class="tool-card" data-tags="unit convert length weight temperature" role="listitem">
+          <div class="tool-icon icon-cyan" aria-hidden="true">⚖️</div>
+          <h3>Unit Converter</h3>
+          <p>Convert length, weight, temperature and more between different units.</p>
+          <button class="tool-btn" data-tool="unitconverter" aria-label="Open Unit Converter tool">Open Tool →</button>
+        </div>
+        <div class="tool-card" data-tags="age calculator birthday date born" role="listitem">
+          <div class="tool-icon icon-blue" aria-hidden="true">🎂</div>
+          <h3>Age Calculator</h3>
+          <p>Calculate exact age in years, months and days from a date of birth.</p>
+          <button class="tool-btn" data-tool="agecalc" aria-label="Open Age Calculator tool">Open Tool →</button>
+        </div>
+        <div class="tool-card" data-tags="bmi body mass index health weight height" role="listitem">
+          <div class="tool-icon icon-green" aria-hidden="true">💪</div>
+          <h3>BMI Calculator</h3>
+          <p>Calculate Body Mass Index and see your weight category instantly.</p>
+          <button class="tool-btn" data-tool="bmi" aria-label="Open BMI Calculator tool">Open Tool →</button>
+        </div>
+      </div>
+
+      <div class="ad-placeholder ad-mid" aria-label="Advertisement space">📢 Advertisement (728×250)</div>
+
+      <div class="section-title" style="margin-top:8px">
+        <div class="category-label">❓ FAQ</div>
+        <h2>Frequently Asked Questions</h2>
+        <p>Everything you need to know about ToolsHub</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="faq-section">
+    <div class="container">
+      <div style="max-width:720px;margin:0 auto" role="list" aria-label="Frequently asked questions">
+        <div class="faq-item" role="listitem">
+          <button class="faq-q" aria-expanded="false">Are all tools completely free? <span class="icon" aria-hidden="true">+</span></button>
+          <div class="faq-a" role="region">Yes! Every tool on ToolsHub is 100% free to use. No account, no subscription, no hidden fees — ever.</div>
+        </div>
+        <div class="faq-item" role="listitem">
+          <button class="faq-q" aria-expanded="false">Do I need to create an account? <span class="icon" aria-hidden="true">+</span></button>
+          <div class="faq-a" role="region">No account is required. Simply visit the site, click a tool, and use it instantly. Your data stays in your browser.</div>
+        </div>
+        <div class="faq-item" role="listitem">
+          <button class="faq-q" aria-expanded="false">Is my data safe and private? <span class="icon" aria-hidden="true">+</span></button>
+          <div class="faq-a" role="region">Absolutely. All tools run 100% in your browser using JavaScript. No data is sent to any server. What you type stays on your device.</div>
+        </div>
+        <div class="faq-item" role="listitem">
+          <button class="faq-q" aria-expanded="false">Can I use these tools on mobile? <span class="icon" aria-hidden="true">+</span></button>
+          <div class="faq-a" role="region">Yes. ToolsHub is fully responsive and works great on smartphones, tablets, and desktop browsers.</div>
+        </div>
+        <div class="faq-item" role="listitem">
+          <button class="faq-q" aria-expanded="false">How many tools are available? <span class="icon" aria-hidden="true">+</span></button>
+          <div class="faq-a" role="region">Currently 8 tools covering text processing, utilities, and calculators. More tools are being added regularly.</div>
+        </div>
+        <div class="faq-item" role="listitem">
+          <button class="faq-q" aria-expanded="false">Who built ToolsHub? <span class="icon" aria-hidden="true">+</span></button>
+          <div class="faq-a" role="region">ToolsHub was built by Dilshan Nayanajith Ilangasinghe, a developer from Sri Lanka passionate about creating free, useful tools for everyone.</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="container"><div class="ad-placeholder ad-bot" aria-label="Advertisement space">📢 Advertisement (728×90)</div></div>
+</div><!-- /home -->
+
+<!-- ══════════ BLOG SECTION ══════════ -->
+<div id="blog" class="section">
+
+  <!-- Blog list view -->
+  <div id="blogListView">
+    <div class="blog-hero">
+      <h1>📝 Articles &amp; Guides</h1>
+      <p>Expert tips, step-by-step guides, and practical knowledge to help you get more done online.</p>
+    </div>
+
+    <div class="blog-layout">
+      <!-- Main blog grid -->
+      <div class="blog-main">
+        <div class="ad-placeholder ad-top" aria-label="Advertisement space" style="margin-bottom:28px">📢 Advertisement (728×90)</div>
+        <div class="blog-grid" id="blogGrid">
+
+          <!-- Article Card 1: BMI -->
+          <article class="blog-card" data-article="bmi-guide" role="article">
+            <div class="blog-card-img bg-grad-2"><div class="blog-card-img-inner">💪</div></div>
+            <div class="blog-card-body">
+              <span class="blog-card-tag">🏥 Health</span>
+              <h3>How to Calculate BMI Correctly: A Complete Step-by-Step Guide</h3>
+              <p>Learn what BMI really means, how to calculate it accurately for adults and children, understand the categories, and discover its limitations as a health metric.</p>
+              <div class="blog-card-meta">
+                <span>📅 Jan 15, 2025</span>
+                <span>⏱ 7 min read</span>
+              </div>
+              <button class="read-more-btn" data-article="bmi-guide" style="margin-top:12px">Read Article →</button>
+            </div>
+          </article>
+
+          <!-- Article Card 2: Password -->
+          <article class="blog-card" data-article="password-guide" role="article">
+            <div class="blog-card-img bg-grad-3"><div class="blog-card-img-inner">🔐</div></div>
+            <div class="blog-card-body">
+              <span class="blog-card-tag">🔒 Security</span>
+              <h3>How to Generate a Strong and Secure Password: The Complete Guide</h3>
+              <p>Discover why most passwords are dangerously weak, what makes a password truly secure, and how to generate and manage strong passwords you can actually use.</p>
+              <div class="blog-card-meta">
+                <span>📅 Jan 22, 2025</span>
+                <span>⏱ 8 min read</span>
+              </div>
+              <button class="read-more-btn" data-article="password-guide" style="margin-top:12px">Read Article →</button>
+            </div>
+          </article>
+
+          <!-- Article Card 3: Word Count -->
+          <article class="blog-card" data-article="wordcount-guide" role="article">
+            <div class="blog-card-img bg-grad-1"><div class="blog-card-img-inner">📄</div></div>
+            <div class="blog-card-body">
+              <span class="blog-card-tag">✍️ Writing</span>
+              <h3>What Is Word Count and Why It Matters for Writers &amp; Marketers</h3>
+              <p>Explore the importance of word count in blogging, SEO, academic writing, and social media — and learn exactly how to check and control it for maximum impact.</p>
+              <div class="blog-card-meta">
+                <span>📅 Feb 3, 2025</span>
+                <span>⏱ 6 min read</span>
+              </div>
+              <button class="read-more-btn" data-article="wordcount-guide" style="margin-top:12px">Read Article →</button>
+            </div>
+          </article>
+
+          <!-- Article Card 4: Productivity -->
+          <article class="blog-card" data-article="productivity-guide" role="article">
+            <div class="blog-card-img bg-grad-4"><div class="blog-card-img-inner">⚡</div></div>
+            <div class="blog-card-body">
+              <span class="blog-card-tag">🚀 Productivity</span>
+              <h3>How to Use Free Online Tools to Skyrocket Your Productivity</h3>
+              <p>From automating repetitive text tasks to instant calculations and secure passwords — discover how the right online tools can save hours every week.</p>
+              <div class="blog-card-meta">
+                <span>📅 Feb 14, 2025</span>
+                <span>⏱ 7 min read</span>
+              </div>
+              <button class="read-more-btn" data-article="productivity-guide" style="margin-top:12px">Read Article →</button>
+            </div>
+          </article>
+
+          <!-- Article Card 5: Unit Conversion -->
+          <article class="blog-card" data-article="unit-guide" role="article">
+            <div class="blog-card-img bg-grad-5"><div class="blog-card-img-inner">⚖️</div></div>
+            <div class="blog-card-body">
+              <span class="blog-card-tag">📐 Math</span>
+              <h3>A Beginner's Guide to Unit Conversion: Formulas, Examples &amp; Tips</h3>
+              <p>Confused by kilometers vs miles, kilograms vs pounds, or Celsius vs Fahrenheit? This practical guide walks you through the most important unit conversions with real examples.</p>
+              <div class="blog-card-meta">
+                <span>📅 Mar 1, 2025</span>
+                <span>⏱ 8 min read</span>
+              </div>
+              <button class="read-more-btn" data-article="unit-guide" style="margin-top:12px">Read Article →</button>
+            </div>
+          </article>
+
+        </div><!-- /blog-grid -->
+        <div class="ad-placeholder ad-mid" aria-label="Advertisement space">📢 Advertisement (728×250)</div>
+      </div><!-- /blog-main -->
+
+      <!-- Sidebar -->
+      <aside class="blog-sidebar" aria-label="Blog sidebar">
+        <div class="ad-sidebar">📢 Ad (300×280)</div>
+        <div class="sidebar-widget">
+          <h3>🔧 Try Our Tools</h3>
+          <div class="sidebar-tool-link" data-tool-sidebar="bmi"><div class="sidebar-tool-icon icon-green">💪</div><span class="sidebar-tool-name">BMI Calculator</span></div>
+          <div class="sidebar-tool-link" data-tool-sidebar="password"><div class="sidebar-tool-icon icon-orange">🔐</div><span class="sidebar-tool-name">Password Generator</span></div>
+          <div class="sidebar-tool-link" data-tool-sidebar="wordcounter"><div class="sidebar-tool-icon icon-blue">📄</div><span class="sidebar-tool-name">Word Counter</span></div>
+          <div class="sidebar-tool-link" data-tool-sidebar="unitconverter"><div class="sidebar-tool-icon icon-cyan">⚖️</div><span class="sidebar-tool-name">Unit Converter</span></div>
+          <div class="sidebar-tool-link" data-tool-sidebar="qrcode"><div class="sidebar-tool-icon icon-green">📱</div><span class="sidebar-tool-name">QR Code Generator</span></div>
+        </div>
+        <div class="sidebar-widget">
+          <h3>📚 Popular Articles</h3>
+          <div class="sidebar-art-link" data-article="bmi-guide"><div class="sidebar-art-num">1</div><span class="sidebar-art-title">How to Calculate BMI Correctly</span></div>
+          <div class="sidebar-art-link" data-article="password-guide"><div class="sidebar-art-num">2</div><span class="sidebar-art-title">Generate a Strong Secure Password</span></div>
+          <div class="sidebar-art-link" data-article="wordcount-guide"><div class="sidebar-art-num">3</div><span class="sidebar-art-title">What Is Word Count &amp; Why It Matters</span></div>
+          <div class="sidebar-art-link" data-article="productivity-guide"><div class="sidebar-art-num">4</div><span class="sidebar-art-title">Online Tools for Productivity</span></div>
+          <div class="sidebar-art-link" data-article="unit-guide"><div class="sidebar-art-num">5</div><span class="sidebar-art-title">Beginner's Guide to Unit Conversion</span></div>
+        </div>
+        <div class="ad-sidebar">📢 Ad (300×280)</div>
+      </aside>
+    </div><!-- /blog-layout -->
+  </div><!-- /blogListView -->
+
+  <!-- ══ ARTICLE PAGES ══ -->
+
+  <!-- Article 1: BMI Guide -->
+  <div class="article-page" id="article-bmi-guide">
+    <div class="article-layout">
+      <main class="article-main">
+        <div class="article-header">
+          <button class="back-btn" data-back="blog">← Back to Articles</button>
+          <span class="article-tag">🏥 Health &amp; Fitness</span>
+          <h1>How to Calculate BMI Correctly: A Complete Step-by-Step Guide</h1>
+          <div class="article-meta-row">
+            <div class="article-meta-item"><div class="article-author-avatar">DN</div><span class="article-author-name">Dilshan Nayanajith</span></div>
+            <span class="article-meta-item">📅 January 15, 2025</span>
+            <span class="article-meta-item">⏱ 7 min read</span>
+            <span class="article-meta-item">🏥 Health</span>
+          </div>
+        </div>
+        <div class="article-featured-img bg-grad-2">💪</div>
+        <div class="article-body">
+          <p>Body Mass Index — commonly known as BMI — is one of the most widely used screening tools for assessing whether a person's weight is healthy in relation to their height. While it is not a perfect measure of health, understanding BMI can give you a useful starting point for conversations with healthcare professionals and for monitoring your own wellness journey.</p>
+          <p>In this comprehensive guide, we will walk you through exactly what BMI is, how to calculate it step by step, what the different categories mean, and — just as importantly — what its limitations are.</p>
+
+          <h2>What Is BMI?</h2>
+          <p>BMI stands for <strong>Body Mass Index</strong>. It is a simple numerical value calculated from a person's height and weight. The concept was developed by Belgian mathematician Adolphe Quetelet in the 1830s and was later adapted by health organisations worldwide as a quick way to classify people into weight categories.</p>
+          <p>BMI does not directly measure body fat percentage, muscle mass, or overall health. It simply provides a ratio of weight to height that correlates — on a population level — with body fat levels and certain health risks.</p>
+
+          <h2>The BMI Formula</h2>
+          <p>There are two versions of the formula depending on the unit system you use:</p>
+          <div class="highlight-box">
+            <p><strong>Metric Formula (kg and cm):</strong></p>
+            <p>BMI = Weight (kg) ÷ Height (m)²</p>
+            <p style="margin-top:12px"><strong>Imperial Formula (lbs and inches):</strong></p>
+            <p>BMI = (Weight (lbs) × 703) ÷ Height (inches)²</p>
+          </div>
+          <p>The key thing to remember when using the metric formula is to convert your height to <em>metres</em>, not centimetres. For example, if you are 175 cm tall, your height in metres is 1.75.</p>
+
+          <h2>Step-by-Step Calculation Example</h2>
+          <p>Let's work through a concrete example using the metric formula:</p>
+          <ul>
+            <li><strong>Weight:</strong> 70 kg</li>
+            <li><strong>Height:</strong> 175 cm = 1.75 m</li>
+            <li><strong>Step 1:</strong> Square the height → 1.75 × 1.75 = 3.0625</li>
+            <li><strong>Step 2:</strong> Divide weight by that number → 70 ÷ 3.0625 = <strong>22.86</strong></li>
+          </ul>
+          <p>A BMI of 22.86 falls comfortably in the <strong>Normal Weight</strong> category — a healthy result.</p>
+
+          <h2>BMI Categories Explained</h2>
+          <p>The World Health Organisation (WHO) defines the following BMI categories for adults:</p>
+          <table>
+            <tr><th>BMI Range</th><th>Category</th><th>Health Implication</th></tr>
+            <tr><td>Below 18.5</td><td>Underweight</td><td>May indicate malnutrition or other issues</td></tr>
+            <tr><td>18.5 – 24.9</td><td>Normal Weight</td><td>Associated with good health outcomes</td></tr>
+            <tr><td>25.0 – 29.9</td><td>Overweight</td><td>Slightly elevated risk of some conditions</td></tr>
+            <tr><td>30.0 and above</td><td>Obese</td><td>Higher risk of diabetes, heart disease, etc.</td></tr>
+          </table>
+
+          <div class="ad-placeholder ad-inline">📢 Advertisement (728×100)</div>
+
+          <h2>BMI for Children and Teenagers</h2>
+          <p>For people under 18, standard BMI categories do not apply. Instead, doctors use <strong>BMI-for-age percentiles</strong>, which compare a child's BMI to other children of the same age and sex. This accounts for the fact that body composition changes significantly during growth and development.</p>
+
+          <h2>Important Limitations of BMI</h2>
+          <p>BMI is a useful screening tool, but it is far from a complete picture of health. Here are some key limitations you should be aware of:</p>
+          <ul>
+            <li><strong>It does not distinguish muscle from fat.</strong> A highly muscular athlete may have a high BMI but very low body fat.</li>
+            <li><strong>It ignores fat distribution.</strong> Where fat is stored (e.g., around the abdomen) matters more for health risk than total weight.</li>
+            <li><strong>It varies by ethnicity.</strong> Some health organisations recommend lower BMI thresholds for people of Asian descent.</li>
+            <li><strong>It does not account for age or sex.</strong> Older adults may carry more fat at lower BMI values, and women generally have higher body fat percentages than men at the same BMI.</li>
+          </ul>
+
+          <blockquote>"BMI is a tool, not a verdict. Use it alongside other health indicators and always consult a qualified healthcare professional for personalised advice."</blockquote>
+
+          <h2>Beyond BMI: Other Useful Measures</h2>
+          <p>To get a more complete picture of your health, consider tracking these alongside BMI:</p>
+          <ul>
+            <li><strong>Waist circumference</strong> — A waist over 94 cm (men) or 80 cm (women) is associated with higher health risk.</li>
+            <li><strong>Waist-to-height ratio</strong> — Keep your waist circumference to less than half your height.</li>
+            <li><strong>Body fat percentage</strong> — Measured via DEXA scan, bioelectrical impedance, or skinfold calipers.</li>
+          </ul>
+
+          <div class="cta-box">
+            <h3>💪 Ready to Calculate Your BMI?</h3>
+            <p>Use our free, instant BMI Calculator — no signup, no downloads, works right in your browser.</p>
+            <button class="btn" data-tool="bmi">Open BMI Calculator →</button>
+          </div>
+
+          <h2>Frequently Asked Questions</h2>
+          <h3>Is a BMI of 25 considered overweight?</h3>
+          <p>Yes, a BMI of exactly 25 sits at the lower boundary of the "Overweight" category (25.0–29.9). However, it is very close to the normal range and should be interpreted in context with other health indicators.</p>
+          <h3>Can BMI change quickly?</h3>
+          <p>BMI is directly tied to your weight and height. Height changes slowly after adulthood, so any change in BMI primarily reflects weight changes. Meaningful changes to BMI typically take weeks to months of consistent dietary and exercise changes.</p>
+          <h3>What is a healthy BMI for women vs men?</h3>
+          <p>The standard BMI categories are the same for men and women — a range of 18.5 to 24.9 is considered healthy for all adults. However, women typically carry more essential body fat than men at the same BMI, which is normal and healthy.</p>
+
+          <div class="ad-placeholder ad-inline">📢 Advertisement (728×100)</div>
+        </div>
+
+        <div class="article-footer">
+          <div class="ad-placeholder ad-bot" style="margin-bottom:28px">📢 Advertisement (728×90)</div>
+          <h3>Related Articles</h3>
+          <div class="related-articles-grid">
+            <div class="related-art-card" data-article="productivity-guide"><div class="tag">🚀 Productivity</div><h4>How to Use Online Tools to Boost Productivity</h4></div>
+            <div class="related-art-card" data-article="unit-guide"><div class="tag">📐 Math</div><h4>Beginner's Guide to Unit Conversion</h4></div>
+            <div class="related-art-card" data-article="password-guide"><div class="tag">🔒 Security</div><h4>How to Generate a Strong Secure Password</h4></div>
+          </div>
+        </div>
+      </main>
+
+      <aside class="article-sidebar" aria-label="Article sidebar">
+        <div class="ad-sidebar">📢 Ad (300×280)</div>
+        <div class="sidebar-widget">
+          <h3>🔧 Try These Tools</h3>
+          <div class="sidebar-tool-link" data-tool-sidebar="bmi"><div class="sidebar-tool-icon icon-green">💪</div><span class="sidebar-tool-name">BMI Calculator</span></div>
+          <div class="sidebar-tool-link" data-tool-sidebar="unitconverter"><div class="sidebar-tool-icon icon-cyan">⚖️</div><span class="sidebar-tool-name">Unit Converter</span></div>
+        </div>
+        <div class="sidebar-widget">
+          <h3>📚 More Articles</h3>
+          <div class="sidebar-art-link" data-article="password-guide"><div class="sidebar-art-num">1</div><span class="sidebar-art-title">Generate a Strong Password</span></div>
+          <div class="sidebar-art-link" data-article="wordcount-guide"><div class="sidebar-art-num">2</div><span class="sidebar-art-title">Word Count &amp; Why It Matters</span></div>
+          <div class="sidebar-art-link" data-article="productivity-guide"><div class="sidebar-art-num">3</div><span class="sidebar-art-title">Tools for Productivity</span></div>
+          <div class="sidebar-art-link" data-article="unit-guide"><div class="sidebar-art-num">4</div><span class="sidebar-art-title">Guide to Unit Conversion</span></div>
+        </div>
+        <div class="ad-sidebar">📢 Ad (300×280)</div>
+      </aside>
+    </div>
+  </div><!-- /article-bmi-guide -->
+
+  <!-- Article 2: Password Guide -->
+  <div class="article-page" id="article-password-guide">
+    <div class="article-layout">
+      <main class="article-main">
+        <div class="article-header">
+          <button class="back-btn" data-back="blog">← Back to Articles</button>
+          <span class="article-tag">🔒 Security</span>
+          <h1>How to Generate a Strong and Secure Password: The Complete Guide</h1>
+          <div class="article-meta-row">
+            <div class="article-meta-item"><div class="article-author-avatar">DN</div><span class="article-author-name">Dilshan Nayanajith</span></div>
+            <span class="article-meta-item">📅 January 22, 2025</span>
+            <span class="article-meta-item">⏱ 8 min read</span>
+            <span class="article-meta-item">🔒 Security</span>
+          </div>
+        </div>
+        <div class="article-featured-img bg-grad-3">🔐</div>
+        <div class="article-body">
+          <p>Every year, billions of user accounts are compromised in data breaches. The most common reason? Weak or reused passwords. Despite years of security warnings, studies consistently show that millions of people still use passwords like "123456", "password", or their own name. If you are using a weak password right now, your accounts are at serious risk.</p>
+          <p>This guide will show you exactly what makes a password strong, how to generate one, and how to manage multiple strong passwords without losing your mind.</p>
+
+          <h2>Why Weak Passwords Are So Dangerous</h2>
+          <p>Modern hackers don't just sit at a keyboard guessing passwords manually. They use sophisticated software tools that can attempt <strong>billions of password combinations per second</strong>. A simple 6-character lowercase password can be cracked in under a second. Here's how quickly passwords can be broken:</p>
+          <div class="highlight-box">
+            <p><strong>Time to crack a password (using modern hardware):</strong></p>
+            <ul>
+              <li>6 characters, lowercase only → <strong>Instant</strong></li>
+              <li>8 characters, mixed case → <strong>About 22 minutes</strong></li>
+              <li>10 characters, mixed + numbers → <strong>Several hours</strong></li>
+              <li>12 characters, mixed + numbers + symbols → <strong>34,000 years</strong></li>
+            </ul>
+          </div>
+          <p>The difference between a 8-character and a 12-character password is not small — it is the difference between your account being cracked in an afternoon versus being effectively uncrackable.</p>
+
+          <h2>What Makes a Password Truly Strong?</h2>
+          <p>A strong password has four key characteristics:</p>
+          <ul>
+            <li><strong>Length:</strong> At least 12 characters, ideally 16 or more. Every extra character exponentially increases the time to crack.</li>
+            <li><strong>Complexity:</strong> A mix of uppercase letters (A–Z), lowercase letters (a–z), numbers (0–9), and symbols (!@#$%^&amp;*).</li>
+            <li><strong>Randomness:</strong> Avoid predictable patterns, words from the dictionary, names, dates, or keyboard sequences like "qwerty".</li>
+            <li><strong>Uniqueness:</strong> Never reuse the same password across multiple websites. If one site is breached, attackers will try your password on all other sites.</li>
+          </ul>
+
+          <div class="ad-placeholder ad-inline">📢 Advertisement (728×100)</div>
+
+          <h2>The Four Biggest Password Mistakes</h2>
+          <h3>1. Using Personal Information</h3>
+          <p>Your birthday, pet's name, phone number, or favourite sports team are among the first things attackers try. This information is often publicly available on social media and is trivially easy to guess.</p>
+          <h3>2. Reusing Passwords Across Sites</h3>
+          <p>When any one site you use is breached, attackers will test your email and password combination on hundreds of other popular sites. This is called a <em>credential stuffing attack</em>. Using unique passwords for every site completely neutralises this threat.</p>
+          <h3>3. Using Simple Substitutions</h3>
+          <p>Replacing letters with numbers — like "P@ssw0rd" — is so commonly known that modern cracking software has long since included these patterns. Simple substitutions provide almost no extra security.</p>
+          <h3>4. Storing Passwords in Unsafe Places</h3>
+          <p>Writing passwords on sticky notes, in an unencrypted notes app, or in a plain text file on your desktop is a significant security risk. Use a proper password manager instead.</p>
+
+          <h2>How to Generate a Strong Password</h2>
+          <p>There are two reliable approaches to generating strong passwords:</p>
+          <h3>Method 1: Use a Password Generator</h3>
+          <p>The easiest and most reliable method is to use a dedicated password generator tool. A good generator will create a random, complex password of your chosen length instantly. You simply copy it and store it in a password manager.</p>
+
+          <div class="cta-box">
+            <h3>🔐 Generate a Strong Password Instantly</h3>
+            <p>Use our free Password Generator — choose length, character types, and copy your new secure password in seconds.</p>
+            <button class="btn" data-tool="password">Open Password Generator →</button>
+          </div>
+
+          <h3>Method 2: The Passphrase Method</h3>
+          <p>A passphrase is a sequence of 4–6 random, unrelated words strung together. For example: <strong>carpet-volcano-tuesday-river</strong>. This is easier to remember than a random string and can be surprisingly strong due to its length. The words must be truly random, not a sentence or phrase from a song or book.</p>
+
+          <h2>Managing Multiple Strong Passwords</h2>
+          <p>The obvious challenge with using unique, complex passwords for every site is remembering them all. The solution is a <strong>password manager</strong> — an application that securely stores all your passwords behind one strong master password.</p>
+          <p>Popular and reputable password managers include Bitwarden (free, open-source), 1Password, and Dashlane. Most browsers also have built-in password managers that are much better than using no manager at all.</p>
+          <p>With a password manager, you only need to remember one strong master password, and the manager handles everything else — generating, storing, and auto-filling your passwords.</p>
+
+          <h2>Additional Security: Two-Factor Authentication</h2>
+          <p>Even the strongest password can be compromised through phishing, malware, or data breaches on poorly secured websites. <strong>Two-factor authentication (2FA)</strong> adds a second layer of security: even if an attacker obtains your password, they also need access to your phone or email to log in.</p>
+          <p>Enable 2FA on every important account — especially email, banking, and social media. An authenticator app (like Google Authenticator or Authy) is more secure than SMS-based 2FA.</p>
+
+          <div class="ad-placeholder ad-inline">📢 Advertisement (728×100)</div>
+        </div>
+
+        <div class="article-footer">
+          <div class="ad-placeholder ad-bot" style="margin-bottom:28px">📢 Advertisement (728×90)</div>
+          <h3>Related Articles</h3>
+          <div class="related-articles-grid">
+            <div class="related-art-card" data-article="productivity-guide"><div class="tag">🚀 Productivity</div><h4>How to Use Online Tools to Boost Productivity</h4></div>
+            <div class="related-art-card" data-article="wordcount-guide"><div class="tag">✍️ Writing</div><h4>What Is Word Count and Why It Matters</h4></div>
+            <div class="related-art-card" data-article="bmi-guide"><div class="tag">🏥 Health</div><h4>How to Calculate BMI Correctly</h4></div>
+          </div>
+        </div>
+      </main>
+
+      <aside class="article-sidebar" aria-label="Article sidebar">
+        <div class="ad-sidebar">📢 Ad (300×280)</div>
+        <div class="sidebar-widget">
+          <h3>🔧 Try These Tools</h3>
+          <div class="sidebar-tool-link" data-tool-sidebar="password"><div class="sidebar-tool-icon icon-orange">🔐</div><span class="sidebar-tool-name">Password Generator</span></div>
+          <div class="sidebar-tool-link" data-tool-sidebar="qrcode"><div class="sidebar-tool-icon icon-green">📱</div><span class="sidebar-tool-name">QR Code Generator</span></div>
+        </div>
+        <div class="sidebar-widget">
+          <h3>📚 More Articles</h3>
+          <div class="sidebar-art-link" data-article="bmi-guide"><div class="sidebar-art-num">1</div><span class="sidebar-art-title">How to Calculate BMI Correctly</span></div>
+          <div class="sidebar-art-link" data-article="wordcount-guide"><div class="sidebar-art-num">2</div><span class="sidebar-art-title">Word Count &amp; Why It Matters</span></div>
+          <div class="sidebar-art-link" data-article="productivity-guide"><div class="sidebar-art-num">3</div><span class="sidebar-art-title">Tools for Productivity</span></div>
+          <div class="sidebar-art-link" data-article="unit-guide"><div class="sidebar-art-num">4</div><span class="sidebar-art-title">Guide to Unit Conversion</span></div>
+        </div>
+        <div class="ad-sidebar">📢 Ad (300×280)</div>
+      </aside>
+    </div>
+  </div><!-- /article-password-guide -->
+
+  <!-- Article 3: Word Count Guide -->
+  <div class="article-page" id="article-wordcount-guide">
+    <div class="article-layout">
+      <main class="article-main">
+        <div class="article-header">
+          <button class="back-btn" data-back="blog">← Back to Articles</button>
+          <span class="article-tag">✍️ Writing</span>
+          <h1>What Is Word Count and Why It Matters for Writers &amp; Marketers</h1>
+          <div class="article-meta-row">
+            <div class="article-meta-item"><div class="article-author-avatar">DN</div><span class="article-author-name">Dilshan Nayanajith</span></div>
+            <span class="article-meta-item">📅 February 3, 2025</span>
+            <span class="article-meta-item">⏱ 6 min read</span>
+            <span class="article-meta-item">✍️ Writing</span>
+          </div>
+        </div>
+        <div class="article-featured-img bg-grad-1">📄</div>
+        <div class="article-body">
+          <p>Whether you are writing a blog post, a college essay, a social media caption, or a professional report — word count matters more than most people realise. It affects how your content is received by readers, how it ranks in search engines, and whether it meets the requirements of the context it is written for.</p>
+          <p>In this guide, we will cover what word count is, why it is important in different contexts, and how to use a word counter tool effectively.</p>
+
+          <h2>What Exactly Is Word Count?</h2>
+          <p>Word count is simply the number of words in a piece of text. Most writing tools count a "word" as any sequence of characters separated by spaces or punctuation. However, different tools may count things like hyphenated words, numbers, or contractions differently — which is why using a dedicated, consistent word counter is important when precision matters.</p>
+          <p>Related metrics you'll often see alongside word count include:</p>
+          <ul>
+            <li><strong>Character count</strong> — The total number of characters, including or excluding spaces.</li>
+            <li><strong>Sentence count</strong> — The number of complete sentences, useful for readability analysis.</li>
+            <li><strong>Paragraph count</strong> — Useful for checking structural balance in documents.</li>
+            <li><strong>Reading time</strong> — An estimated time to read the text, usually calculated at 200–250 words per minute for average adult readers.</li>
+          </ul>
+
+          <h2>Word Count in Different Contexts</h2>
+          <h3>Blog Posts and SEO Content</h3>
+          <p>Word count plays a significant role in search engine optimisation (SEO). Studies and analyses of top-ranking content consistently show that <strong>longer, well-structured articles tend to rank higher</strong> on Google for competitive keywords. This is because longer content has more opportunity to cover a topic comprehensively, include relevant keywords naturally, and earn links from other websites.</p>
+          <p>General guidelines for blog post length:</p>
+          <ul>
+            <li>Short informational posts: 500–800 words</li>
+            <li>Standard blog posts: 1,000–1,500 words</li>
+            <li>In-depth guides (like this one): 1,500–3,000+ words</li>
+            <li>Pillar/cornerstone content: 3,000–10,000+ words</li>
+          </ul>
+
+          <div class="ad-placeholder ad-inline">📢 Advertisement (728×100)</div>
+
+          <h3>Academic Writing</h3>
+          <p>In academic settings, word count is almost always a strict requirement. Essays, dissertations, and research papers have minimum and maximum word limits that must be followed precisely. Going significantly over or under the word count can result in grade penalties.</p>
+          <p>Academic word counts typically exclude things like the title page, abstract, table of contents, references, and appendices — so always check the specific requirements of your institution.</p>
+
+          <h3>Social Media Platforms</h3>
+          <p>Every social media platform has its own character and word limits:</p>
+          <table>
+            <tr><th>Platform</th><th>Limit</th><th>Best Practice</th></tr>
+            <tr><td>X (Twitter)</td><td>280 characters</td><td>Under 240 for engagement</td></tr>
+            <tr><td>Instagram caption</td><td>2,200 characters</td><td>First 125 chars matter most</td></tr>
+            <tr><td>LinkedIn post</td><td>3,000 characters</td><td>1,300–2,000 for best reach</td></tr>
+            <tr><td>Facebook post</td><td>63,206 characters</td><td>Under 80 chars for max reach</td></tr>
+            <tr><td>YouTube description</td><td>5,000 characters</td><td>First 200 words are indexed</td></tr>
+          </table>
+
+          <h3>Copywriting and Marketing</h3>
+          <p>In marketing copy, the guiding principle is "as long as it needs to be, and no longer." Email subject lines should be under 60 characters. Landing page headlines should be concise and punchy. Product descriptions need to balance detail with readability. Knowing your word count helps you trim ruthlessly and ensure every word earns its place.</p>
+
+          <h2>How to Use a Word Counter Effectively</h2>
+          <p>A good word counter does more than just count words. When using a tool like ToolsHub's Word Counter, here are some practical tips:</p>
+          <ul>
+            <li>Check your word count <strong>before and after editing</strong> to see how much you've cut or added.</li>
+            <li>Use the <strong>reading time</strong> estimate to gauge whether your content matches the attention span of your target audience.</li>
+            <li>Track <strong>sentence count</strong> to identify when your writing becomes too dense or too fragmented.</li>
+            <li>Use the <strong>paragraph count</strong> to ensure consistent structure — especially for long-form articles.</li>
+          </ul>
+
+          <div class="cta-box">
+            <h3>📄 Count Your Words Instantly</h3>
+            <p>Paste your text into our free Word Counter and get instant stats on words, characters, sentences, and estimated reading time.</p>
+            <button class="btn" data-tool="wordcounter">Open Word Counter →</button>
+          </div>
+
+          <h2>Common Word Count Myths</h2>
+          <h3>Myth: Longer articles always rank better</h3>
+          <p>Length alone does not guarantee rankings. A 3,000-word article that is padded, repetitive, and poorly structured will underperform a focused, well-written 1,200-word piece. Quality and relevance always outweigh quantity.</p>
+          <h3>Myth: All words count equally</h3>
+          <p>In SEO, not all words are equal. Keywords, headings, and the first few paragraphs carry more weight than filler text. Focus on making every word purposeful rather than just hitting a target number.</p>
+
+          <div class="ad-placeholder ad-inline">📢 Advertisement (728×100)</div>
+        </div>
+
+        <div class="article-footer">
+          <div class="ad-placeholder ad-bot" style="margin-bottom:28px">📢 Advertisement (728×90)</div>
+          <h3>Related Articles</h3>
+          <div class="related-articles-grid">
+            <div class="related-art-card" data-article="productivity-guide"><div class="tag">🚀 Productivity</div><h4>How to Use Online Tools to Boost Productivity</h4></div>
+            <div class="related-art-card" data-article="password-guide"><div class="tag">🔒 Security</div><h4>Generate a Strong Secure Password</h4></div>
+            <div class="related-art-card" data-article="unit-guide"><div class="tag">📐 Math</div><h4>Beginner's Guide to Unit Conversion</h4></div>
+          </div>
+        </div>
+      </main>
+
+      <aside class="article-sidebar" aria-label="Article sidebar">
+        <div class="ad-sidebar">📢 Ad (300×280)</div>
+        <div class="sidebar-widget">
+          <h3>🔧 Try These Tools</h3>
+          <div class="sidebar-tool-link" data-tool-sidebar="wordcounter"><div class="sidebar-tool-icon icon-blue">📄</div><span class="sidebar-tool-name">Word Counter</span></div>
+          <div class="sidebar-tool-link" data-tool-sidebar="charcounter"><div class="sidebar-tool-icon icon-purple">🔠</div><span class="sidebar-tool-name">Character Counter</span></div>
+          <div class="sidebar-tool-link" data-tool-sidebar="caseconverter"><div class="sidebar-tool-icon icon-pink">🔡</div><span class="sidebar-tool-name">Case Converter</span></div>
+        </div>
+        <div class="sidebar-widget">
+          <h3>📚 More Articles</h3>
+          <div class="sidebar-art-link" data-article="bmi-guide"><div class="sidebar-art-num">1</div><span class="sidebar-art-title">How to Calculate BMI Correctly</span></div>
+          <div class="sidebar-art-link" data-article="password-guide"><div class="sidebar-art-num">2</div><span class="sidebar-art-title">Generate a Strong Password</span></div>
+          <div class="sidebar-art-link" data-article="productivity-guide"><div class="sidebar-art-num">3</div><span class="sidebar-art-title">Tools for Productivity</span></div>
+          <div class="sidebar-art-link" data-article="unit-guide"><div class="sidebar-art-num">4</div><span class="sidebar-art-title">Guide to Unit Conversion</span></div>
+        </div>
+        <div class="ad-sidebar">📢 Ad (300×280)</div>
+      </aside>
+    </div>
+  </div><!-- /article-wordcount-guide -->
+
+  <!-- Article 4: Productivity Guide -->
+  <div class="article-page" id="article-productivity-guide">
+    <div class="article-layout">
+      <main class="article-main">
+        <div class="article-header">
+          <button class="back-btn" data-back="blog">← Back to Articles</button>
+          <span class="article-tag">🚀 Productivity</span>
+          <h1>How to Use Free Online Tools to Skyrocket Your Productivity</h1>
+          <div class="article-meta-row">
+            <div class="article-meta-item"><div class="article-author-avatar">DN</div><span class="article-author-name">Dilshan Nayanajith</span></div>
+            <span class="article-meta-item">📅 February 14, 2025</span>
+            <span class="article-meta-item">⏱ 7 min read</span>
+            <span class="article-meta-item">🚀 Productivity</span>
+          </div>
+        </div>
+        <div class="article-featured-img bg-grad-4">⚡</div>
+        <div class="article-body">
+          <p>We live in an era where powerful tools that once required expensive software or technical expertise are now available to anyone with a browser — completely free. From instant text analysis to complex unit conversions and secure password generation, free online tools can eliminate dozens of small but time-consuming tasks from your daily workflow.</p>
+          <p>In this guide, we'll explore how to identify the right tools for your needs, how to integrate them into your workflow, and walk through specific examples of how common online tools save real time every single day.</p>
+
+          <h2>The Hidden Cost of Small, Repetitive Tasks</h2>
+          <p>Research into workplace productivity consistently shows that <strong>context switching and small interruptions</strong> are among the greatest drains on deep work. Every time you open a calculator app, manually count words, or try to remember a password formula, you are breaking your flow and wasting mental energy on something that doesn't require it.</p>
+          <p>Consider this: if you spend just 3 minutes per day on repetitive tasks that could be automated or streamlined with a simple online tool, that adds up to <strong>over 18 hours per year</strong>. For professionals who value their time, that's a significant resource.</p>
+
+          <h2>Text Tools That Save Time Every Day</h2>
+          <h3>Word Counter — More Than Just Counting</h3>
+          <p>Writers, bloggers, students, and content marketers constantly need to check word count. But a good word counter also gives you sentence count, paragraph count, and reading time estimates — all in one place. Instead of pasting into Word or Google Docs, a dedicated word counter gives you instant results without switching applications.</p>
+
+          <div class="ad-placeholder ad-inline">📢 Advertisement (728×100)</div>
+
+          <h3>Case Converter — Eliminate Manual Reformatting</h3>
+          <p>Have you ever received a block of text in ALL CAPS that needed to be converted to normal case? Or needed to format a list of names into Title Case for a report? Doing this manually is tedious and error-prone. A case converter tool handles any length of text in milliseconds.</p>
+          <h3>Character Counter — Stay Within Platform Limits</h3>
+          <p>Social media managers, email marketers, and developers frequently need to stay within strict character limits. Knowing you have 43 characters remaining in a tweet — and seeing the count update in real time — prevents frustrating cut-off messages and saves multiple rounds of editing.</p>
+
+          <h2>Utility Tools That Eliminate Lookup Time</h2>
+          <h3>Unit Converter</h3>
+          <p>Whether you are a student working on a physics problem, a chef converting a recipe from imperial to metric, or an engineer checking specifications, unit conversions come up constantly. A reliable unit converter handles length, weight, temperature, area, and speed — no mental math required.</p>
+          <h3>QR Code Generator</h3>
+          <p>Small business owners, teachers, and event organisers frequently need QR codes for menus, resources, or check-ins. Creating a QR code used to require a paid subscription or a complicated app. Today, a good online QR generator creates one instantly from any URL or text, customisable in size and colour, and downloadable in seconds.</p>
+
+          <div class="cta-box">
+            <h3>⚡ Try All 8 Free Tools Right Now</h3>
+            <p>No signup, no downloads. Open any tool and get results instantly — all from one place.</p>
+            <button class="btn" data-section-nav="home">Browse All Tools →</button>
+          </div>
+
+          <h2>Building a Personal Productivity Toolkit</h2>
+          <p>The key to getting maximum value from online tools is building a consistent, simple toolkit you return to regularly. Here's a practical approach:</p>
+          <ul>
+            <li><strong>Bookmark your go-to tools</strong> — Keep a bookmark folder with the 5–6 tools you use most often. One click should be all it takes.</li>
+            <li><strong>Learn keyboard shortcuts</strong> — On any page, Ctrl+A selects all text, Ctrl+C copies, and Ctrl+V pastes. Mastering these basic shortcuts means you can transfer text into a tool and get results without ever touching the mouse.</li>
+            <li><strong>Combine tools in sequence</strong> — A powerful workflow: paste messy text into a case converter, then copy the output into a word counter to check length, then paste into your content platform.</li>
+            <li><strong>Use a password manager alongside a generator</strong> — Generate a new strong password, copy it, and immediately save it in your password manager. Two tools, 15 seconds, permanent security improvement.</li>
+          </ul>
+
+          <h2>Evaluating Online Tools: What to Look For</h2>
+          <p>Not all free online tools are created equal. When choosing a tool, consider these factors:</p>
+          <ul>
+            <li><strong>Privacy:</strong> Does the tool process your data in your browser, or does it send data to a server? For sensitive content, browser-based tools are far safer.</li>
+            <li><strong>Speed:</strong> A good tool gives instant results. If you're waiting for a page to load every time you check a word count, it defeats the purpose.</li>
+            <li><strong>No signup required:</strong> Tools that require account creation add friction. The best tools work immediately with zero barriers.</li>
+            <li><strong>Mobile-friendly:</strong> You should be able to use your toolkit on a smartphone as easily as on a desktop.</li>
+          </ul>
+
+          <div class="ad-placeholder ad-inline">📢 Advertisement (728×100)</div>
+        </div>
+
+        <div class="article-footer">
+          <div class="ad-placeholder ad-bot" style="margin-bottom:28px">📢 Advertisement (728×90)</div>
+          <h3>Related Articles</h3>
+          <div class="related-articles-grid">
+            <div class="related-art-card" data-article="wordcount-guide"><div class="tag">✍️ Writing</div><h4>What Is Word Count &amp; Why It Matters</h4></div>
+            <div class="related-art-card" data-article="password-guide"><div class="tag">🔒 Security</div><h4>Generate a Strong Secure Password</h4></div>
+            <div class="related-art-card" data-article="unit-guide"><div class="tag">📐 Math</div><h4>Beginner's Guide to Unit Conversion</h4></div>
+          </div>
+        </div>
+      </main>
+
+      <aside class="article-sidebar" aria-label="Article sidebar">
+        <div class="ad-sidebar">📢 Ad (300×280)</div>
+        <div class="sidebar-widget">
+          <h3>🔧 Featured Tools</h3>
+          <div class="sidebar-tool-link" data-tool-sidebar="wordcounter"><div class="sidebar-tool-icon icon-blue">📄</div><span class="sidebar-tool-name">Word Counter</span></div>
+          <div class="sidebar-tool-link" data-tool-sidebar="password"><div class="sidebar-tool-icon icon-orange">🔐</div><span class="sidebar-tool-name">Password Generator</span></div>
+          <div class="sidebar-tool-link" data-tool-sidebar="unitconverter"><div class="sidebar-tool-icon icon-cyan">⚖️</div><span class="sidebar-tool-name">Unit Converter</span></div>
+          <div class="sidebar-tool-link" data-tool-sidebar="qrcode"><div class="sidebar-tool-icon icon-green">📱</div><span class="sidebar-tool-name">QR Code Generator</span></div>
+          <div class="sidebar-tool-link" data-tool-sidebar="caseconverter"><div class="sidebar-tool-icon icon-pink">🔡</div><span class="sidebar-tool-name">Case Converter</span></div>
+        </div>
+        <div class="ad-sidebar">📢 Ad (300×280)</div>
+      </aside>
+    </div>
+  </div><!-- /article-productivity-guide -->
+
+  <!-- Article 5: Unit Conversion Guide -->
+  <div class="article-page" id="article-unit-guide">
+    <div class="article-layout">
+      <main class="article-main">
+        <div class="article-header">
+          <button class="back-btn" data-back="blog">← Back to Articles</button>
+          <span class="article-tag">📐 Math &amp; Science</span>
+          <h1>A Beginner's Guide to Unit Conversion: Formulas, Examples &amp; Tips</h1>
+          <div class="article-meta-row">
+            <div class="article-meta-item"><div class="article-author-avatar">DN</div><span class="article-author-name">Dilshan Nayanajith</span></div>
+            <span class="article-meta-item">📅 March 1, 2025</span>
+            <span class="article-meta-item">⏱ 8 min read</span>
+            <span class="article-meta-item">📐 Math</span>
+          </div>
+        </div>
+        <div class="article-featured-img bg-grad-5">⚖️</div>
+        <div class="article-body">
+          <p>Unit conversion is one of those skills that sounds simple but trips up millions of people every day — from students doing homework to professionals checking measurements, travellers figuring out distances, or home cooks adapting a foreign recipe. The core challenge is that the world uses two major measurement systems — the metric system and the imperial system — and they don't always talk to each other intuitively.</p>
+          <p>This guide will walk you through the most important conversions across length, weight, temperature, area, and speed — with practical examples and simple formulas you can actually remember.</p>
+
+          <h2>The Two Main Measurement Systems</h2>
+          <p>Before diving into specific conversions, it helps to understand the two systems:</p>
+          <ul>
+            <li><strong>Metric System (SI):</strong> Used by most of the world. Based on multiples of 10, making conversions within the system simple. Units include metres, kilograms, litres, and Celsius.</li>
+            <li><strong>Imperial System:</strong> Used primarily in the United States (and partially in the UK and a few other countries). Includes inches, feet, miles, pounds, and Fahrenheit. Conversions within this system are less intuitive.</li>
+          </ul>
+          <p>In international contexts — science, trade, medicine, and aviation — the metric system dominates. However, imperial units remain common in everyday life in the US and in some industries globally.</p>
+
+          <h2>Length Conversions</h2>
+          <p>Length is the most commonly converted unit type. Here are the key relationships to remember:</p>
+          <div class="highlight-box">
+            <p><strong>Key Length Conversions:</strong></p>
+            <ul>
+              <li>1 inch = 2.54 centimetres</li>
+              <li>1 foot = 30.48 centimetres = 0.3048 metres</li>
+              <li>1 mile = 1.609 kilometres</li>
+              <li>1 metre = 3.281 feet = 39.37 inches</li>
+              <li>1 kilometre = 0.621 miles</li>
+            </ul>
+          </div>
+          <p><strong>Practical Example:</strong> You are travelling in the US and see a road sign saying the next town is 25 miles away. To convert to kilometres: 25 × 1.609 = <strong>40.2 km</strong>.</p>
+
+          <div class="ad-placeholder ad-inline">📢 Advertisement (728×100)</div>
+
+          <h2>Weight and Mass Conversions</h2>
+          <p>Weight conversions are essential in cooking, fitness, shipping, and science:</p>
+          <table>
+            <tr><th>From</th><th>To</th><th>Multiply by</th></tr>
+            <tr><td>Kilograms (kg)</td><td>Pounds (lb)</td><td>2.205</td></tr>
+            <tr><td>Pounds (lb)</td><td>Kilograms (kg)</td><td>0.4536</td></tr>
+            <tr><td>Ounces (oz)</td><td>Grams (g)</td><td>28.35</td></tr>
+            <tr><td>Grams (g)</td><td>Ounces (oz)</td><td>0.03527</td></tr>
+            <tr><td>Metric ton</td><td>Kilograms (kg)</td><td>1,000</td></tr>
+          </table>
+          <p><strong>Practical Example:</strong> A recipe calls for 2 pounds of flour, but your scale only shows grams. 2 lb × 453.6 = <strong>907 grams</strong>.</p>
+
+          <h2>Temperature Conversions</h2>
+          <p>Temperature is arguably the most confusing conversion because it doesn't use simple multiplication. The relationship between Celsius and Fahrenheit involves both multiplication and addition/subtraction:</p>
+          <div class="highlight-box">
+            <p><strong>Celsius to Fahrenheit:</strong> °F = (°C × 9/5) + 32</p>
+            <p><strong>Fahrenheit to Celsius:</strong> °C = (°F − 32) × 5/9</p>
+            <p><strong>Celsius to Kelvin:</strong> K = °C + 273.15</p>
+          </div>
+          <p><strong>Practical Examples:</strong></p>
+          <ul>
+            <li>Body temperature of 37°C → (37 × 9/5) + 32 = <strong>98.6°F</strong></li>
+            <li>Oven temperature of 350°F → (350 − 32) × 5/9 = <strong>176.7°C</strong></li>
+            <li>Freezing point 0°C → <strong>32°F</strong> → <strong>273.15 K</strong></li>
+          </ul>
+          <p>A useful mental shortcut: subtract 30 and halve the result for a rough Fahrenheit to Celsius estimate. For example, 70°F → (70-30)/2 = 20°C (actual is 21.1°C — close enough for daily use).</p>
+
+          <h2>Speed Conversions</h2>
+          <p>Speed conversions come up frequently when reading international news (car speeds, weather reports) or travelling:</p>
+          <ul>
+            <li>1 km/h = 0.6214 mph</li>
+            <li>1 mph = 1.609 km/h</li>
+            <li>1 m/s = 3.6 km/h = 2.237 mph</li>
+            <li>1 knot = 1.852 km/h (used in aviation and sailing)</li>
+          </ul>
+          <p><strong>Practical Example:</strong> A speed limit of 100 km/h (common in Europe) = 100 × 0.6214 = <strong>62.1 mph</strong>.</p>
+
+          <h2>When to Use an Online Unit Converter</h2>
+          <p>While knowing key conversions by memory is useful, nobody can remember every conversion factor for every unit. This is where a reliable online unit converter becomes invaluable. A good converter should:</p>
+          <ul>
+            <li>Handle multiple categories (length, weight, temperature, area, speed)</li>
+            <li>Give instant results without page reloads</li>
+            <li>Allow you to specify both the "from" and "to" units clearly</li>
+            <li>Work on mobile as well as desktop</li>
+          </ul>
+
+          <div class="cta-box">
+            <h3>⚖️ Convert Any Unit Instantly</h3>
+            <p>Our free Unit Converter handles length, weight, temperature, area, and speed — all in one place, no signup needed.</p>
+            <button class="btn" data-tool="unitconverter">Open Unit Converter →</button>
+          </div>
+
+          <h2>Common Conversion Mistakes to Avoid</h2>
+          <ul>
+            <li><strong>Forgetting to square or cube units for area and volume.</strong> 1 metre = 3.281 feet, but 1 m² ≠ 3.281 ft². You must square the factor: 1 m² = 3.281² = 10.76 ft².</li>
+            <li><strong>Using approximate values for precision work.</strong> For scientific or engineering calculations, always use the precise conversion factor rather than a rounded approximation.</li>
+            <li><strong>Confusing mass and weight.</strong> Kilograms measure mass; Newtons measure weight (force). For everyday purposes they are used interchangeably, but in physics they are different things.</li>
+          </ul>
+
+          <div class="ad-placeholder ad-inline">📢 Advertisement (728×100)</div>
+        </div>
+
+        <div class="article-footer">
+          <div class="ad-placeholder ad-bot" style="margin-bottom:28px">📢 Advertisement (728×90)</div>
+          <h3>Related Articles</h3>
+          <div class="related-articles-grid">
+            <div class="related-art-card" data-article="bmi-guide"><div class="tag">🏥 Health</div><h4>How to Calculate BMI Correctly</h4></div>
+            <div class="related-art-card" data-article="productivity-guide"><div class="tag">🚀 Productivity</div><h4>Online Tools for Productivity</h4></div>
+            <div class="related-art-card" data-article="wordcount-guide"><div class="tag">✍️ Writing</div><h4>What Is Word Count &amp; Why It Matters</h4></div>
+          </div>
+        </div>
+      </main>
+
+      <aside class="article-sidebar" aria-label="Article sidebar">
+        <div class="ad-sidebar">📢 Ad (300×280)</div>
+        <div class="sidebar-widget">
+          <h3>🔧 Try These Tools</h3>
+          <div class="sidebar-tool-link" data-tool-sidebar="unitconverter"><div class="sidebar-tool-icon icon-cyan">⚖️</div><span class="sidebar-tool-name">Unit Converter</span></div>
+          <div class="sidebar-tool-link" data-tool-sidebar="bmi"><div class="sidebar-tool-icon icon-green">💪</div><span class="sidebar-tool-name">BMI Calculator</span></div>
+          <div class="sidebar-tool-link" data-tool-sidebar="agecalc"><div class="sidebar-tool-icon icon-blue">🎂</div><span class="sidebar-tool-name">Age Calculator</span></div>
+        </div>
+        <div class="sidebar-widget">
+          <h3>📚 More Articles</h3>
+          <div class="sidebar-art-link" data-article="bmi-guide"><div class="sidebar-art-num">1</div><span class="sidebar-art-title">How to Calculate BMI Correctly</span></div>
+          <div class="sidebar-art-link" data-article="password-guide"><div class="sidebar-art-num">2</div><span class="sidebar-art-title">Generate a Strong Password</span></div>
+          <div class="sidebar-art-link" data-article="wordcount-guide"><div class="sidebar-art-num">3</div><span class="sidebar-art-title">Word Count &amp; Why It Matters</span></div>
+          <div class="sidebar-art-link" data-article="productivity-guide"><div class="sidebar-art-num">4</div><span class="sidebar-art-title">Tools for Productivity</span></div>
+        </div>
+        <div class="ad-sidebar">📢 Ad (300×280)</div>
+      </aside>
+    </div>
+  </div><!-- /article-unit-guide -->
+
+</div><!-- /blog -->
+
+<!-- ══════════ ABOUT SECTION ══════════ -->
+<div id="about" class="section">
+  <div class="page-hero">
+    <h1>About ToolsHub</h1>
+    <p>Built with ❤️ from Sri Lanka for everyone, everywhere.</p>
+  </div>
+  <div class="page-content">
+    <div class="founder-section">
+      <div class="founder-card">
+        <div class="founder-card-top">
+          <div class="founder-avatar-wrap">
+            <div class="founder-avatar" aria-label="Founder initials">DN</div>
+            <div class="founder-headline">
+              <div class="founder-name">Dilshan Nayanajith Ilangasinghe</div>
+              <div class="founder-title">💻 Web Developer &amp; Software Enthusiast</div>
+              <div class="founder-flag">🇱🇰 Sri Lankan · Founder of ToolsHub</div>
+            </div>
+          </div>
+        </div>
+        <div class="founder-card-body">
+          <p class="founder-bio">Dilshan is a passionate web developer and software enthusiast from Sri Lanka with a background in both technology and business. Holding dual qualifications in Business Studies and Technology (BBST &amp; BBA), he bridges the gap between technical precision and real-world usability. ToolsHub was born from his belief that powerful tools should be freely accessible to everyone — no sign-ups, no paywalls, no complexity. He continues to build and improve the platform one tool at a time.</p>
+          <div class="founder-details">
+            <div class="founder-detail-item"><div class="founder-detail-icon">👤</div><div class="founder-detail-text"><span class="founder-detail-label">Full Name</span><span class="founder-detail-val">Dilshan Nayanajith Ilangasinghe</span></div></div>
+            <div class="founder-detail-item"><div class="founder-detail-icon">🌍</div><div class="founder-detail-text"><span class="founder-detail-label">Nationality</span><span class="founder-detail-val">Sri Lankan 🇱🇰</span></div></div>
+            <div class="founder-detail-item"><div class="founder-detail-icon">🎓</div><div class="founder-detail-text"><span class="founder-detail-label">Qualifications</span><span class="founder-detail-val">BBST &amp; BBA</span></div></div>
+            <div class="founder-detail-item"><div class="founder-detail-icon">✉️</div><div class="founder-detail-text"><span class="founder-detail-label">Email</span><span class="founder-detail-val"><a href="mailto:nayanajithilangasinghe2002@gmail.com">nayanajithilangasinghe2002@gmail.com</a></span></div></div>
+          </div>
+          <div class="skills-section">
+            <h4>Technologies &amp; Skills</h4>
+            <div class="skills-grid">
+              <span class="skill-tag">HTML5</span><span class="skill-tag">CSS3</span><span class="skill-tag">JavaScript</span>
+              <span class="skill-tag">Responsive Design</span><span class="skill-tag">UI/UX</span>
+              <span class="skill-tag">GitHub Pages</span><span class="skill-tag">SEO</span><span class="skill-tag">Web Performance</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <h2>Our Mission</h2>
+    <p>ToolsHub was created with a simple mission: make useful everyday tools and expert knowledge freely available to everyone. No paywalls, no forced accounts, no data harvesting — just clean, fast, and reliable tools and articles that work directly in your browser.</p>
+    <h2>Why ToolsHub?</h2>
+    <p>Many online tools require sign-ups, show intrusive ads, or send your data to remote servers. ToolsHub is different. Everything runs client-side in JavaScript, meaning your data never leaves your device. We also publish in-depth, original articles to help you get more value from our tools.</p>
+    <h2>Our Tools</h2>
+    <p>We currently offer 8 free tools across three categories: Text Tools (Word Counter, Character Counter, Case Converter), Utility Tools (QR Code Generator, Password Generator, Unit Converter), and Calculators (Age Calculator, BMI Calculator). More tools are planned.</p>
+    <h2>Technology</h2>
+    <p>ToolsHub is a static website built with pure HTML, CSS, and JavaScript. It runs on GitHub Pages with zero backend. This means it's fast, always available, and completely free to host.</p>
+  </div>
+</div>
+
+<!-- ══════════ CONTACT SECTION ══════════ -->
+<div id="contact" class="section">
+  <div class="page-hero">
+    <h1>Contact Us</h1>
+    <p>Have a suggestion or found a bug? We'd love to hear from you.</p>
+  </div>
+  <div class="page-content">
+    <div class="contact-form" role="form" aria-label="Contact form">
+      <h3>📬 Send a Message</h3>
+      <div class="form-group"><label for="cName">Your Name</label><input type="text" id="cName" placeholder="John Doe" autocomplete="name"/></div>
+      <div class="form-group"><label for="cEmail">Email Address</label><input type="email" id="cEmail" placeholder="you@example.com" autocomplete="email"/></div>
+      <div class="form-group"><label for="cSubject">Subject</label><input type="text" id="cSubject" placeholder="e.g. Tool suggestion, Bug report…"/></div>
+      <div class="form-group"><label for="cMessage">Message</label><textarea id="cMessage" placeholder="Write your message here…" style="min-height:120px"></textarea></div>
+      <button class="btn btn-primary" id="contactSubmitBtn">📤 Send Message</button>
+      <div class="contact-note" style="margin-top:20px">⏱️ We typically respond within <strong>24–48 hours</strong>. For urgent matters, email us directly at <a href="mailto:nayanajithilangasinghe2002@gmail.com" style="color:var(--blue-600)">nayanajithilangasinghe2002@gmail.com</a></div>
+      <div id="contactSuccess" style="display:none;margin-top:16px;padding:14px 18px;background:#d4f8e8;border-radius:var(--radius-sm);color:#0a7a4a;font-weight:600" role="alert">✅ Thank you! Your message has been sent. We'll be in touch within 24–48 hours.</div>
+    </div>
+  </div>
+</div>
+
+<!-- ══════════ PRIVACY SECTION ══════════ -->
+<div id="privacy" class="section">
+  <div class="page-hero"><h1>Privacy Policy</h1><p>Last updated: 2025. We take your privacy seriously.</p></div>
+  <div class="page-content">
+    <h2>Information We Collect</h2><p>ToolsHub is a client-side application. We do not collect, store, or transmit any personal data you enter into our tools. All processing happens locally in your web browser.</p>
+    <h2>Google AdSense</h2><p>We use Google AdSense to display advertisements. Google AdSense may use cookies and web beacons to collect data about your browsing behaviour in order to serve personalised ads. This data is collected by Google, not by ToolsHub. You may opt out by visiting <a href="https://www.google.com/settings/ads" style="color:var(--blue-500)" target="_blank" rel="noopener noreferrer">Google Ads Settings</a>.</p>
+    <h2>Cookies</h2><p>ToolsHub itself does not set any cookies. Third-party services like Google AdSense may set cookies for advertising purposes. You can control cookies through your browser settings.</p>
+    <h2>Analytics</h2><p>We may use Google Analytics to understand how visitors use our site. This data is aggregated and anonymised. No personally identifiable information is collected.</p>
+    <h2>Third-Party Links</h2><p>Our website may contain links to third-party websites. We are not responsible for the privacy practices of those sites.</p>
+    <h2>Children's Privacy</h2><p>ToolsHub does not knowingly collect personal information from children under the age of 13.</p>
+    <h2>Changes to This Policy</h2><p>We may update this Privacy Policy from time to time. Changes will be posted on this page with an updated date.</p>
+    <h2>Contact</h2><p>For privacy-related questions, contact us at <a href="mailto:nayanajithilangasinghe2002@gmail.com" style="color:var(--blue-500)">nayanajithilangasinghe2002@gmail.com</a></p>
+  </div>
+</div>
+
+<!-- ══════════ TERMS SECTION ══════════ -->
+<div id="terms" class="section">
+  <div class="page-hero"><h1>Terms of Service</h1><p>Please read these terms carefully before using ToolsHub.</p></div>
+  <div class="page-content">
+    <h2>Acceptance of Terms</h2><p>By accessing and using ToolsHub, you agree to be bound by these Terms of Service.</p>
+    <h2>Permitted Use</h2><p>ToolsHub is provided for lawful, personal and commercial use including personal productivity, educational and research purposes, and business use.</p>
+    <h2>Prohibited Use</h2><p>You must NOT use ToolsHub for any illegal, harmful, or malicious activity including generating content that violates any law, creating codes for unauthorised system access, spam, phishing, or any form of fraud.</p>
+    <h2>Disclaimer of Warranties</h2><p>ToolsHub is provided "as is" without any warranty. We make no representations about the accuracy or completeness of any tool results. Always verify important calculations independently.</p>
+    <h2>Limitation of Liability</h2><p>ToolsHub and its creator shall not be liable for any damages arising from the use of this website.</p>
+    <h2>Intellectual Property</h2><p>All content, design, and code on ToolsHub is the intellectual property of Dilshan Nayanajith Ilangasinghe.</p>
+    <h2>Changes to Terms</h2><p>We reserve the right to modify these terms at any time.</p>
+    <h2>Contact</h2><p>For questions about these terms, contact <a href="mailto:nayanajithilangasinghe2002@gmail.com" style="color:var(--blue-500)">nayanajithilangasinghe2002@gmail.com</a></p>
+  </div>
+</div>
+
+<!-- ══════════ FOOTER ══════════ -->
+<footer>
+  <div class="footer-logo">Tools<span>Hub</span></div>
+  <p>All-in-One Free Online Tools &amp; Expert Articles — No Sign-up, No Cost, Always Free.</p>
+  <div class="footer-links">
+    <button data-section="home">Home</button>
+    <button data-section="blog">Blog</button>
+    <button data-section="about">About</button>
+    <button data-section="contact">Contact</button>
+    <button data-section="privacy">Privacy Policy</button>
+    <button data-section="terms">Terms of Service</button>
+  </div>
+  <div class="copyright">© 2025 ToolsHub by Dilshan Nayanajith Ilangasinghe 🇱🇰. All rights reserved.</div>
+</footer>
+
+<!-- ══════════ MODAL ══════════ -->
+<div class="modal-overlay" id="modalOverlay" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+  <div class="modal" id="modal">
+    <div class="modal-header">
+      <h2 id="modalTitle">Tool</h2>
+      <button class="modal-close" id="modalCloseBtn" aria-label="Close modal">✕</button>
+    </div>
+    <div class="modal-body" id="modalBody"></div>
+  </div>
+</div>
+
+<!-- ══════════ TOAST ══════════ -->
+<div class="copy-toast" id="toast" role="status" aria-live="polite">✅ Copied!</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
+
+<script>
+(function () {
+'use strict';
+
+// ══════════════════════════════════════════
+// ── NAVIGATION
+// ══════════════════════════════════════════
+function showSection(id) {
+  document.querySelectorAll('.section').forEach(s => s.classList.remove('active'));
+  const target = document.getElementById(id);
+  if (target) target.classList.add('active');
+  document.querySelectorAll('[data-section]').forEach(btn => {
+    btn.classList.toggle('active', btn.dataset.section === id);
+    if (btn.getAttribute('role') === 'menuitem') {
+      btn.setAttribute('aria-current', btn.dataset.section === id ? 'page' : 'false');
+    }
+  });
+  // If navigating to blog, show list view (hide all article pages)
+  if (id === 'blog') showBlogList();
+  window.scrollTo({ top: 0, behavior: 'smooth' });
+  closeMobileMenu();
+}
+
+function closeMobileMenu() {
+  const mm = document.getElementById('mobileMenu');
+  if (mm) mm.style.display = 'none';
+  const hb = document.getElementById('hamburger');
+  if (hb) hb.setAttribute('aria-expanded', 'false');
+}
+
+// Section nav buttons (desktop nav + mobile menu + footer)
+document.querySelectorAll('button[data-section]').forEach(btn => {
+  btn.addEventListener('click', () => showSection(btn.dataset.section));
+});
+
+document.getElementById('navLogo').addEventListener('click', () => showSection('home'));
+document.getElementById('navLogo').addEventListener('keydown', e => {
+  if (e.key === 'Enter' || e.key === ' ') showSection('home');
+});
+
+// Hamburger
+document.getElementById('hamburger').addEventListener('click', () => {
+  const mm = document.getElementById('mobileMenu');
+  const hb = document.getElementById('hamburger');
+  const isOpen = mm.style.display === 'block';
+  mm.style.display = isOpen ? 'none' : 'block';
+  hb.setAttribute('aria-expanded', String(!isOpen));
+});
+
+// ══════════════════════════════════════════
+// ── BLOG NAVIGATION
+// ══════════════════════════════════════════
+function showBlogList() {
+  document.getElementById('blogListView').style.display = 'block';
+  document.querySelectorAll('.article-page').forEach(p => p.classList.remove('active-article'));
+}
+
+function showArticle(slug) {
+  document.getElementById('blogListView').style.display = 'none';
+  document.querySelectorAll('.article-page').forEach(p => p.classList.remove('active-article'));
+  const art = document.getElementById('article-' + slug);
+  if (art) art.classList.add('active-article');
+  // Ensure blog section is active
+  document.querySelectorAll('.section').forEach(s => s.classList.remove('active'));
+  document.getElementById('blog').classList.add('active');
+  document.querySelectorAll('[data-section]').forEach(btn => {
+    btn.classList.toggle('active', btn.dataset.section === 'blog');
+  });
+  window.scrollTo({ top: 0, behavior: 'smooth' });
+  closeMobileMenu();
+}
+
+// Blog card clicks (both on the card and the "Read more" button)
+document.getElementById('blogGrid').addEventListener('click', e => {
+  const btn = e.target.closest('[data-article]');
+  if (btn) showArticle(btn.dataset.article);
+});
+
+// "Back to Articles" buttons
+document.querySelectorAll('.back-btn[data-back]').forEach(btn => {
+  btn.addEventListener('click', () => showBlogList());
+});
+
+// Related article cards
+document.querySelectorAll('.related-art-card[data-article]').forEach(card => {
+  card.addEventListener('click', () => showArticle(card.dataset.article));
+});
+
+// Sidebar article links
+document.querySelectorAll('.sidebar-art-link[data-article]').forEach(link => {
+  link.addEventListener('click', () => showArticle(link.dataset.article));
+});
+
+// Article CTA buttons that open tools
+document.querySelectorAll('.cta-box .btn[data-tool]').forEach(btn => {
+  btn.addEventListener('click', () => openTool(btn.dataset.tool));
+});
+
+// Article CTA buttons that navigate to sections
+document.querySelectorAll('.btn[data-section-nav]').forEach(btn => {
+  btn.addEventListener('click', () => showSection(btn.dataset.sectionNav));
+});
+
+// Sidebar tool links in blog/article pages
+document.querySelectorAll('[data-tool-sidebar]').forEach(link => {
+  link.addEventListener('click', () => openTool(link.dataset.toolSidebar));
+});
+
+// ══════════════════════════════════════════
+// ── FAQ
+// ══════════════════════════════════════════
+document.querySelectorAll('.faq-q').forEach(btn => {
+  btn.addEventListener('click', () => {
+    const item = btn.closest('.faq-item');
+    const isOpen = item.classList.contains('open');
+    document.querySelectorAll('.faq-item').forEach(i => {
+      i.classList.remove('open');
+      i.querySelector('.faq-q').setAttribute('aria-expanded', 'false');
+    });
+    if (!isOpen) {
+      item.classList.add('open');
+      btn.setAttribute('aria-expanded', 'true');
+    }
+  });
+});
+
+// ══════════════════════════════════════════
+// ── SEARCH
+// ══════════════════════════════════════════
+function filterTools(q) {
+  const query = q.toLowerCase().trim();
+  const grid = document.getElementById('toolsGrid');
+  let visible = 0;
+  document.querySelectorAll('.tool-card').forEach(card => {
+    const text = (card.dataset.tags || '') + card.querySelector('h3').textContent + card.querySelector('p').textContent;
+    const show = !query || text.toLowerCase().includes(query);
+    card.style.display = show ? '' : 'none';
+    if (show) visible++;
+  });
+  let noRes = grid.querySelector('.no-results');
+  if (visible === 0 && query) {
+    if (!noRes) {
+      noRes = document.createElement('div');
+      noRes.className = 'no-results';
+      noRes.innerHTML = '<div style="font-size:2rem">🔍</div><p>No tools found for "<strong>' + query.replace(/</g,'&lt;') + '</strong>"</p>';
+      grid.appendChild(noRes);
+    }
+  } else if (noRes) {
+    noRes.remove();
+  }
+}
+document.getElementById('searchInput').addEventListener('input', e => filterTools(e.target.value));
+document.getElementById('searchBtn').addEventListener('click', () => filterTools(document.getElementById('searchInput').value));
+
+// ══════════════════════════════════════════
+// ── TOAST
+// ══════════════════════════════════════════
+function showToast(msg) {
+  const t = document.getElementById('toast');
+  t.textContent = msg || '✅ Copied!';
+  t.classList.add('show');
+  setTimeout(() => t.classList.remove('show'), 2500);
+}
+function copyText(text) {
+  if (navigator.clipboard && window.isSecureContext) {
+    navigator.clipboard.writeText(text).then(() => showToast('✅ Copied!')).catch(() => fallbackCopy(text));
+  } else { fallbackCopy(text); }
+}
+function fallbackCopy(text) {
+  const ta = document.createElement('textarea');
+  ta.value = text;
+  ta.style.cssText = 'position:fixed;top:-9999px;left:-9999px;opacity:0';
+  document.body.appendChild(ta);
+  ta.focus(); ta.select();
+  try { document.execCommand('copy'); showToast('✅ Copied!'); } catch(e) { showToast('⚠️ Copy manually.'); }
+  document.body.removeChild(ta);
+}
+
+// ══════════════════════════════════════════
+// ── MODAL
+// ══════════════════════════════════════════
+const TOOLS = {
+  wordcounter:  { title:'📄 Word Counter',       build: buildWordCounter },
+  charcounter:  { title:'🔠 Character Counter',  build: buildCharCounter },
+  caseconverter:{ title:'🔡 Case Converter',     build: buildCaseConverter },
+  qrcode:       { title:'📱 QR Code Generator',  build: buildQRCode },
+  password:     { title:'🔐 Password Generator', build: buildPassword },
+  unitconverter:{ title:'⚖️ Unit Converter',     build: buildUnitConverter },
+  agecalc:      { title:'🎂 Age Calculator',     build: buildAgeCalc },
+  bmi:          { title:'💪 BMI Calculator',     build: buildBMI },
+};
+function openTool(id) {
+  const tool = TOOLS[id];
+  if (!tool) return;
+  document.getElementById('modalTitle').textContent = tool.title;
+  const body = document.getElementById('modalBody');
+  body.innerHTML = '';
+  tool.build(body);
+  document.getElementById('modalOverlay').classList.add('open');
+  document.body.style.overflow = 'hidden';
+  _qrObj = null;
+}
+function closeModal() {
+  document.getElementById('modalOverlay').classList.remove('open');
+  document.body.style.overflow = '';
+  _qrObj = null;
+}
+document.getElementById('modalCloseBtn').addEventListener('click', closeModal);
+document.getElementById('modalOverlay').addEventListener('click', e => { if (e.target === document.getElementById('modalOverlay')) closeModal(); });
+document.addEventListener('keydown', e => { if (e.key === 'Escape') closeModal(); });
+document.getElementById('toolsGrid').addEventListener('click', e => {
+  const btn = e.target.closest('[data-tool]');
+  if (btn) openTool(btn.dataset.tool);
+});
+
+// ══════════════════════════════════════════
+// ── CONTACT FORM
+// ══════════════════════════════════════════
+document.getElementById('contactSubmitBtn').addEventListener('click', function () {
+  const name = document.getElementById('cName').value.trim();
+  const email = document.getElementById('cEmail').value.trim();
+  const subject = document.getElementById('cSubject').value.trim();
+  const message = document.getElementById('cMessage').value.trim();
+  if (!name || !email || !message) { showToast('⚠️ Please fill in Name, Email and Message.'); return; }
+  if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) { showToast('⚠️ Please enter a valid email.'); return; }
+  window.location.href = 'mailto:nayanajithilangasinghe2002@gmail.com?subject=' +
+    encodeURIComponent((subject || 'ToolsHub Contact') + ' — from ' + name) +
+    '&body=' + encodeURIComponent('Name: ' + name + '\nEmail: ' + email + '\n\n' + message);
+  document.getElementById('contactSuccess').style.display = 'block';
+  ['cName','cEmail','cSubject','cMessage'].forEach(id => { document.getElementById(id).value = ''; });
+});
+
+// ══════════════════════════════════════════
+// ── WORD COUNTER
+// ══════════════════════════════════════════
+function buildWordCounter(c) {
+  c.innerHTML = `
+    <div class="form-group"><label for="wcText">Paste or type your text below</label>
+    <textarea id="wcText" placeholder="Start typing or paste text here…" style="min-height:180px"></textarea></div>
+    <div class="stats-row" id="wcStats">
+      <div class="stat-badge"><strong id="wcWords">0</strong><span>Words</span></div>
+      <div class="stat-badge"><strong id="wcChars">0</strong><span>Characters</span></div>
+      <div class="stat-badge"><strong id="wcSents">0</strong><span>Sentences</span></div>
+      <div class="stat-badge"><strong id="wcParas">0</strong><span>Paragraphs</span></div>
+      <div class="stat-badge"><strong id="wcRead">0 min</strong><span>Read Time</span></div>
+    </div>
+    <div class="btn-row" style="margin-top:16px">
+      <button class="btn btn-secondary" id="wcClear">🗑️ Clear</button>
+    </div>`;
+  function update() {
+    const txt = document.getElementById('wcText').value;
+    document.getElementById('wcWords').textContent = txt.trim() ? txt.trim().split(/\s+/).length : 0;
+    document.getElementById('wcChars').textContent = txt.length;
+    document.getElementById('wcSents').textContent = txt.split(/[.!?]+/).filter(s => s.trim()).length;
+    document.getElementById('wcParas').textContent = txt.split(/\n+/).filter(p => p.trim()).length;
+    const w = txt.trim() ? txt.trim().split(/\s+/).length : 0;
+    document.getElementById('wcRead').textContent = (Math.ceil(w / 200) || 0) + ' min';
+  }
+  document.getElementById('wcText').addEventListener('input', update);
+  document.getElementById('wcClear').addEventListener('click', () => { document.getElementById('wcText').value = ''; update(); });
+}
+
+// ══════════════════════════════════════════
+// ── CHARACTER COUNTER
+// ══════════════════════════════════════════
+function buildCharCounter(c) {
+  c.innerHTML = `
+    <div class="form-group"><label for="ccText">Type or paste your text</label>
+    <textarea id="ccText" placeholder="Type here…" style="min-height:160px"></textarea></div>
+    <div class="stats-row">
+      <div class="stat-badge"><strong id="ccTotal">0</strong><span>Total Chars</span></div>
+      <div class="stat-badge"><strong id="ccNoSpace">0</strong><span>No Spaces</span></div>
+      <div class="stat-badge"><strong id="ccSpaces">0</strong><span>Spaces</span></div>
+      <div class="stat-badge"><strong id="ccLines">0</strong><span>Lines</span></div>
+    </div>
+    <div style="margin-top:16px">
+      <label style="font-size:0.82rem;font-weight:600;color:var(--blue-700);margin-bottom:6px;display:block" for="ccLimit">Character Limit Checker</label>
+      <div style="display:flex;gap:10px;align-items:center">
+        <input type="number" id="ccLimit" placeholder="e.g. 280 (Twitter)" style="width:180px" min="1"/>
+        <div id="ccLimitBar" style="flex:1;font-size:0.85rem;color:var(--gray-500)" aria-live="polite"></div>
+      </div>
+    </div>`;
+  function update() {
+    const txt = document.getElementById('ccText').value;
+    const total = txt.length, noSpace = txt.replace(/\s/g,'').length;
+    document.getElementById('ccTotal').textContent = total;
+    document.getElementById('ccNoSpace').textContent = noSpace;
+    document.getElementById('ccSpaces').textContent = total - noSpace;
+    document.getElementById('ccLines').textContent = txt ? txt.split('\n').length : 0;
+    const limit = parseInt(document.getElementById('ccLimit').value) || 0;
+    if (limit > 0) {
+      const rem = limit - total;
+      document.getElementById('ccLimitBar').innerHTML = `<span style="color:${rem<0?'var(--red)':rem<20?'var(--yellow)':'var(--green)'};font-weight:700">${rem<0?Math.abs(rem)+' over limit':rem+' remaining'}</span> of ${limit}`;
+    } else { document.getElementById('ccLimitBar').innerHTML = ''; }
+  }
+  document.getElementById('ccText').addEventListener('input', update);
+  document.getElementById('ccLimit').addEventListener('input', update);
+}
+
+// ══════════════════════════════════════════
+// ── CASE CONVERTER
+// ══════════════════════════════════════════
+function buildCaseConverter(c) {
+  c.innerHTML = `
+    <div class="form-group"><label for="caseInput">Enter your text</label>
+    <textarea id="caseInput" placeholder="Type text here…" style="min-height:130px"></textarea></div>
+    <div class="btn-row">
+      <button class="btn btn-primary" data-case="upper">UPPERCASE</button>
+      <button class="btn btn-secondary" data-case="lower">lowercase</button>
+      <button class="btn btn-secondary" data-case="title">Title Case</button>
+      <button class="btn btn-secondary" data-case="sentence">Sentence case</button>
+      <button class="btn btn-secondary" data-case="toggle">tOGGLE cASE</button>
+    </div>
+    <div id="caseResult" style="display:none;margin-top:16px">
+      <div class="result-label">Result</div>
+      <div class="result-box" id="caseResultBox" aria-live="polite"></div>
+      <div class="btn-row" style="margin-top:10px">
+        <button class="btn btn-green" id="caseCopyBtn">📋 Copy Result</button>
+        <button class="btn btn-secondary" id="caseUseBtn">↩️ Use as Input</button>
+      </div>
+    </div>`;
+  c.querySelectorAll('[data-case]').forEach(btn => {
+    btn.addEventListener('click', () => {
+      const t = document.getElementById('caseInput').value;
+      if (!t.trim()) return;
+      const map = {
+        upper: t => t.toUpperCase(),
+        lower: t => t.toLowerCase(),
+        title: t => t.replace(/\w\S*/g, w => w.charAt(0).toUpperCase()+w.slice(1).toLowerCase()),
+        sentence: t => t.toLowerCase().replace(/(^\s*\w|[.!?]\s*\w)/g, c => c.toUpperCase()),
+        toggle: t => t.split('').map(c => c===c.toUpperCase()?c.toLowerCase():c.toUpperCase()).join('')
+      };
+      document.getElementById('caseResultBox').textContent = map[btn.dataset.case](t);
+      document.getElementById('caseResult').style.display = 'block';
+    });
+  });
+  document.getElementById('caseCopyBtn').addEventListener('click', () => copyText(document.getElementById('caseResultBox').textContent));
+  document.getElementById('caseUseBtn').addEventListener('click', () => { document.getElementById('caseInput').value = document.getElementById('caseResultBox').textContent; });
+}
+
+// ══════════════════════════════════════════
+// ── QR CODE
+// ══════════════════════════════════════════
+let _qrObj = null;
+function buildQRCode(c) {
+  c.innerHTML = `
+    <div class="form-group"><label for="qrInput">Text or URL to encode</label>
+    <input type="text" id="qrInput" placeholder="https://example.com or any text…"/></div>
+    <div style="display:flex;gap:12px;margin-bottom:16px;flex-wrap:wrap">
+      <div style="flex:1;min-width:120px"><label for="qrSize" style="font-size:0.82rem;font-weight:600;color:var(--blue-700);display:block;margin-bottom:6px">Size</label>
+        <select id="qrSize"><option value="128">Small (128px)</option><option value="200" selected>Medium (200px)</option><option value="300">Large (300px)</option></select></div>
+      <div style="flex:1;min-width:120px"><label for="qrColor" style="font-size:0.82rem;font-weight:600;color:var(--blue-700);display:block;margin-bottom:6px">Foreground Color</label>
+        <input type="color" id="qrColor" value="#0f3460" style="width:100%;height:42px;padding:4px;border:1.5px solid var(--gray-200);border-radius:var(--radius-sm)"/></div>
+    </div>
+    <div id="qrcode" style="min-height:60px" aria-live="polite"></div>
+    <div class="btn-row" style="margin-top:16px">
+      <button class="btn btn-green" id="qrDownloadBtn">⬇️ Download QR Code</button>
+      <button class="btn btn-secondary" id="qrClearBtn">🗑️ Clear</button>
+    </div>`;
+  function gen() {
+    const val = document.getElementById('qrInput').value.trim();
+    const wrap = document.getElementById('qrcode');
+    if (!val) { wrap.innerHTML = ''; _qrObj = null; return; }
+    const size = parseInt(document.getElementById('qrSize').value) || 200;
+    const color = document.getElementById('qrColor').value || '#0f3460';
+    wrap.innerHTML = '';
+    if (typeof QRCode !== 'undefined') {
+      _qrObj = new QRCode(wrap, { text: val, width: size, height: size, colorDark: color, colorLight: '#ffffff', correctLevel: QRCode.CorrectLevel.H });
+    } else { wrap.innerHTML = '<p style="color:var(--red);font-size:0.85rem">⚠️ QR library unavailable. Check your internet connection.</p>'; }
+  }
+  document.getElementById('qrInput').addEventListener('input', gen);
+  document.getElementById('qrSize').addEventListener('change', gen);
+  document.getElementById('qrColor').addEventListener('change', gen);
+  document.getElementById('qrDownloadBtn').addEventListener('click', () => {
+    const canvas = document.querySelector('#qrcode canvas');
+    if (!canvas) { showToast('⚠️ Generate a QR code first!'); return; }
+    const a = document.createElement('a'); a.download = 'qrcode-toolshub.png'; a.href = canvas.toDataURL(); a.click();
+  });
+  document.getElementById('qrClearBtn').addEventListener('click', () => {
+    document.getElementById('qrInput').value = ''; document.getElementById('qrcode').innerHTML = ''; _qrObj = null;
+  });
+}
+
+// ══════════════════════════════════════════
+// ── PASSWORD GENERATOR
+// ══════════════════════════════════════════
+function buildPassword(c) {
+  c.innerHTML = `
+    <div class="form-group"><label for="pwLen">Password Length: <strong id="pwLenVal">16</strong></label>
+    <div class="range-row"><input type="range" id="pwLen" min="6" max="64" value="16"/></div></div>
+    <div class="checkbox-group">
+      <label><input type="checkbox" id="pwUpper" checked/> Uppercase (A–Z)</label>
+      <label><input type="checkbox" id="pwLower" checked/> Lowercase (a–z)</label>
+      <label><input type="checkbox" id="pwNums"  checked/> Numbers (0–9)</label>
+      <label><input type="checkbox" id="pwSyms"  checked/> Symbols (!@#…)</label>
+    </div>
+    <div class="result-label" style="margin-top:4px">Generated Password</div>
+    <div class="result-box" id="pwResult" style="font-size:1.1rem;letter-spacing:1px;min-height:54px" aria-live="polite"></div>
+    <div class="strength-bar"><div class="strength-fill" id="strengthFill"></div></div>
+    <div style="font-size:0.8rem;color:var(--gray-500);margin-top:6px" id="strengthLabel" aria-live="polite"></div>
+    <div class="btn-row" style="margin-top:12px">
+      <button class="btn btn-primary" id="pwGenBtn">🔄 Generate New</button>
+      <button class="btn btn-green" id="pwCopyBtn">📋 Copy Password</button>
+    </div>`;
+  function gen() {
+    const len = parseInt(document.getElementById('pwLen').value) || 16;
+    document.getElementById('pwLenVal').textContent = len;
+    const chars = [
+      document.getElementById('pwUpper').checked ? 'ABCDEFGHIJKLMNOPQRSTUVWXYZ' : '',
+      document.getElementById('pwLower').checked ? 'abcdefghijklmnopqrstuvwxyz' : '',
+      document.getElementById('pwNums').checked  ? '0123456789' : '',
+      document.getElementById('pwSyms').checked  ? '!@#$%^&*()-_=+[]{}|;:,.<>?' : ''
+    ];
+    const sets = chars.filter(Boolean);
+    if (!sets.length) { document.getElementById('pwResult').textContent = 'Select at least one option!'; return; }
+    const all = sets.join('');
+    let pw = sets.map(s => s[Math.floor(Math.random()*s.length)]);
+    while (pw.length < len) pw.push(all[Math.floor(Math.random()*all.length)]);
+    pw = pw.sort(()=>Math.random()-.5).slice(0,len).join('');
+    document.getElementById('pwResult').textContent = pw;
+    const score = sets.length;
+    const strength = len < 10 ? 1 : score < 3 ? 2 : 3;
+    document.getElementById('strengthFill').className = 'strength-fill '+['','strength-weak','strength-medium','strength-strong'][strength];
+    document.getElementById('strengthLabel').textContent = ['','⚠️ Weak','🟡 Medium — add more variety','🟢 Strong — great password!'][strength];
+  }
+  document.getElementById('pwLen').addEventListener('input', gen);
+  document.getElementById('pwGenBtn').addEventListener('click', gen);
+  ['pwUpper','pwLower','pwNums','pwSyms'].forEach(id => document.getElementById(id).addEventListener('change', gen));
+  document.getElementById('pwCopyBtn').addEventListener('click', () => {
+    const pw = document.getElementById('pwResult').textContent;
+    if (pw && pw !== 'Select at least one option!') copyText(pw);
+  });
+  gen();
+}
+
+// ══════════════════════════════════════════
+// ── UNIT CONVERTER
+// ══════════════════════════════════════════
+const ucUnits = {
+  length:{m:'Meters',km:'Kilometers',cm:'Centimeters',mm:'Millimeters',inch:'Inches',ft:'Feet',yd:'Yards',mi:'Miles'},
+  weight:{kg:'Kilograms',g:'Grams',mg:'Milligrams',lb:'Pounds',oz:'Ounces',ton:'Metric Tons'},
+  temp:{C:'Celsius',F:'Fahrenheit',K:'Kelvin'},
+  area:{m2:'Sq Meters',km2:'Sq Kilometers',ft2:'Sq Feet',acre:'Acres',ha:'Hectares'},
+  speed:{mps:'m/s',kph:'km/h',mph:'mph',knot:'Knots'},
+};
+const ucBase = {m:1,km:1000,cm:.01,mm:.001,inch:.0254,ft:.3048,yd:.9144,mi:1609.344,kg:1,g:.001,mg:.000001,lb:.453592,oz:.0283495,ton:1000,m2:1,km2:1e6,ft2:.092903,acre:4046.86,ha:10000,mps:1,kph:.277778,mph:.44704,knot:.514444};
+function buildUnitConverter(c) {
+  c.innerHTML = `
+    <div class="form-group"><label for="ucCat">Category</label>
+    <select id="ucCat"><option value="length">Length</option><option value="weight">Weight / Mass</option><option value="temp">Temperature</option><option value="area">Area</option><option value="speed">Speed</option></select></div>
+    <div style="display:flex;gap:12px;align-items:flex-end;flex-wrap:wrap">
+      <div class="form-group" style="flex:1;min-width:100px;margin-bottom:0"><label for="ucFrom">From</label><select id="ucFrom"></select></div>
+      <div class="form-group" style="flex:1;min-width:100px;margin-bottom:0"><label for="ucTo">To</label><select id="ucTo"></select></div>
+    </div>
+    <div class="form-group" style="margin-top:16px"><label for="ucVal">Value</label><input type="number" id="ucVal" placeholder="Enter value…"/></div>
+    <div id="ucResult" style="display:none;margin-top:4px">
+      <div class="result-label">Result</div>
+      <div class="result-box" id="ucResultBox" style="font-size:1.2rem;font-weight:700" aria-live="polite"></div>
+      <div class="btn-row" style="margin-top:10px"><button class="btn btn-green" id="ucCopyBtn">📋 Copy</button></div>
+    </div>`;
+  function opts() {
+    const cat = document.getElementById('ucCat').value, u = ucUnits[cat], keys = Object.keys(u);
+    ['ucFrom','ucTo'].forEach((id,i)=>{const s=document.getElementById(id);s.innerHTML=keys.map(k=>`<option value="${k}">${u[k]}</option>`).join('');s.selectedIndex=i;});
+    conv();
+  }
+  function conv() {
+    const cat=document.getElementById('ucCat').value,from=document.getElementById('ucFrom').value,to=document.getElementById('ucTo').value,val=parseFloat(document.getElementById('ucVal').value);
+    if(isNaN(val)){document.getElementById('ucResult').style.display='none';return;}
+    let r;
+    if(cat==='temp'){let c=from==='C'?val:from==='F'?(val-32)*5/9:val-273.15;r=to==='C'?c:to==='F'?c*9/5+32:c+273.15;}
+    else{r=(val*ucBase[from])/ucBase[to];}
+    document.getElementById('ucResultBox').textContent=`${val} ${ucUnits[cat][from]} = ${parseFloat(r.toFixed(8))} ${ucUnits[cat][to]}`;
+    document.getElementById('ucResult').style.display='block';
+  }
+  document.getElementById('ucCat').addEventListener('change',opts);
+  document.getElementById('ucFrom').addEventListener('change',conv);
+  document.getElementById('ucTo').addEventListener('change',conv);
+  document.getElementById('ucVal').addEventListener('input',conv);
+  document.getElementById('ucCopyBtn').addEventListener('click',()=>copyText(document.getElementById('ucResultBox').textContent));
+  opts();
+}
+
+// ══════════════════════════════════════════
+// ── AGE CALCULATOR
+// ══════════════════════════════════════════
+function buildAgeCalc(c) {
+  const today = new Date().toISOString().split('T')[0];
+  c.innerHTML = `
+    <div class="form-group"><label for="acDob">Date of Birth</label><input type="date" id="acDob" max="${today}"/></div>
+    <div class="form-group"><label for="acTarget">Calculate age as of</label><input type="date" id="acTarget" value="${today}" max="${today}"/></div>
+    <button class="btn btn-primary" id="acCalcBtn" style="margin-bottom:16px">🎂 Calculate Age</button>
+    <div id="acResult" style="display:none" aria-live="polite">
+      <div class="stats-row">
+        <div class="stat-badge"><strong id="acYears">0</strong><span>Years</span></div>
+        <div class="stat-badge"><strong id="acMonths">0</strong><span>Months</span></div>
+        <div class="stat-badge"><strong id="acDays">0</strong><span>Days</span></div>
+      </div>
+      <div class="result-box" id="acDetails" style="margin-top:16px;font-size:0.9rem;line-height:1.8;font-family:'Sora',sans-serif"></div>
+    </div>`;
+  function calc() {
+    const dob=document.getElementById('acDob').value,target=document.getElementById('acTarget').value;
+    if(!dob||!target)return;
+    const d1=new Date(dob),d2=new Date(target);
+    if(d1>d2){document.getElementById('acDetails').textContent='⚠️ Date of birth cannot be after target date.';document.getElementById('acResult').style.display='block';return;}
+    let y=d2.getFullYear()-d1.getFullYear(),m=d2.getMonth()-d1.getMonth(),d=d2.getDate()-d1.getDate();
+    if(d<0){m--;d+=new Date(d2.getFullYear(),d2.getMonth(),0).getDate();}
+    if(m<0){y--;m+=12;}
+    const td=Math.floor((d2-d1)/86400000),tw=Math.floor(td/7),tm=y*12+m;
+    function nextBd(){const n=new Date(d2.getFullYear(),d1.getMonth(),d1.getDate());if(n<=d2)n.setFullYear(d2.getFullYear()+1);return`${n.toDateString()} (in ${Math.ceil((n-d2)/86400000)} days)`;}
+    document.getElementById('acYears').textContent=y;
+    document.getElementById('acMonths').textContent=m;
+    document.getElementById('acDays').textContent=d;
+    document.getElementById('acDetails').innerHTML=`📅 <strong>Total Days:</strong> ${td.toLocaleString()}<br>📅 <strong>Total Weeks:</strong> ${tw.toLocaleString()}<br>📅 <strong>Total Months:</strong> ${tm.toLocaleString()}<br>🎂 <strong>Next Birthday:</strong> ${nextBd()}`;
+    document.getElementById('acResult').style.display='block';
+  }
+  document.getElementById('acCalcBtn').addEventListener('click',calc);
+  document.getElementById('acDob').addEventListener('change',calc);
+  document.getElementById('acTarget').addEventListener('change',calc);
+}
+
+// ══════════════════════════════════════════
+// ── BMI CALCULATOR
+// ══════════════════════════════════════════
+function buildBMI(c) {
+  c.innerHTML = `
+    <div style="display:flex;gap:12px;flex-wrap:wrap">
+      <div class="form-group" style="flex:1;min-width:120px"><label for="bmiWeight">Weight</label><input type="number" id="bmiWeight" placeholder="e.g. 70" min="1"/></div>
+      <div class="form-group" style="flex:1;min-width:100px"><label for="bmiWUnit">Unit</label><select id="bmiWUnit"><option value="kg">kg</option><option value="lb">lbs</option></select></div>
+    </div>
+    <div style="display:flex;gap:12px;flex-wrap:wrap">
+      <div class="form-group" style="flex:1;min-width:120px"><label for="bmiHeight">Height</label><input type="number" id="bmiHeight" placeholder="e.g. 175" min="1"/></div>
+      <div class="form-group" style="flex:1;min-width:100px"><label for="bmiHUnit">Unit</label><select id="bmiHUnit"><option value="cm">cm</option><option value="m">meters</option><option value="in">inches</option><option value="ft">feet</option></select></div>
+    </div>
+    <button class="btn btn-primary" id="bmiCalcBtn">💪 Calculate BMI</button>
+    <div id="bmiResult" style="display:none;margin-top:16px" aria-live="polite">
+      <div class="bmi-meter"><div class="bmi-value" id="bmiVal">0.0</div><div class="bmi-label" id="bmiCat">—</div></div>
+      <div class="result-box" id="bmiDetails" style="font-size:0.88rem;line-height:1.8;font-family:'Sora',sans-serif;margin-top:12px"></div>
+    </div>`;
+  function calc() {
+    let w=parseFloat(document.getElementById('bmiWeight').value),h=parseFloat(document.getElementById('bmiHeight').value);
+    if(!w||!h||w<=0||h<=0)return;
+    const wu=document.getElementById('bmiWUnit').value,hu=document.getElementById('bmiHUnit').value;
+    if(wu==='lb')w*=.453592;
+    if(hu==='cm')h/=100; else if(hu==='in')h*=.0254; else if(hu==='ft')h*=.3048;
+    if(h<=0)return;
+    const bmi=w/(h*h);
+    let cat,cls,advice;
+    if(bmi<18.5){cat='Underweight';cls='bmi-underweight';advice='Consider consulting a nutritionist. A balanced diet can help.';}
+    else if(bmi<25){cat='Normal Weight ✅';cls='bmi-normal';advice='Great! Maintain your healthy lifestyle with regular exercise and a balanced diet.';}
+    else if(bmi<30){cat='Overweight';cls='bmi-overweight';advice='Consider more physical activity and a balanced diet.';}
+    else{cat='Obese';cls='bmi-obese';advice='Please consult a healthcare professional for personalised guidance.';}
+    document.getElementById('bmiVal').textContent=bmi.toFixed(1);
+    document.getElementById('bmiVal').className='bmi-value '+cls;
+    document.getElementById('bmiCat').textContent=cat;
+    document.getElementById('bmiCat').className='bmi-label '+cls;
+    document.getElementById('bmiDetails').innerHTML=`📊 <strong>BMI:</strong> ${bmi.toFixed(2)}<br>📐 <strong>Category:</strong> ${cat}<br>ℹ️ <strong>Health Tip:</strong> ${advice}`;
+    document.getElementById('bmiResult').style.display='block';
+  }
+  document.getElementById('bmiCalcBtn').addEventListener('click',calc);
+  document.getElementById('bmiWeight').addEventListener('input',calc);
+  document.getElementById('bmiHeight').addEventListener('input',calc);
+  document.getElementById('bmiWUnit').addEventListener('change',calc);
+  document.getElementById('bmiHUnit').addEventListener('change',calc);
+}
+
+})();
+</script>
+</body>
+</html>
